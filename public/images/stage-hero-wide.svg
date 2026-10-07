@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" fill="none">
+  <defs>
+    <radialGradient id="wAmbient" cx="62%" cy="26%" r="72%">
+      <stop offset="0%" stop-color="#22321a" stop-opacity="0.72"/>
+      <stop offset="48%" stop-color="#0c1209" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wBackdrop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f09"/>
+      <stop offset="55%" stop-color="#080b07"/>
+      <stop offset="100%" stop-color="#040604"/>
+    </linearGradient>
+
+    <linearGradient id="wDeck" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c361a"/>
+      <stop offset="32%" stop-color="#1a200f"/>
+      <stop offset="100%" stop-color="#070905"/>
+    </linearGradient>
+
+    <linearGradient id="wBeamWarm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe2b8" stop-opacity="0.52"/>
+      <stop offset="42%" stop-color="#ffcf88" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#ffcf88" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wBeamCool" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e2f2c8" stop-opacity="0.44"/>
+      <stop offset="42%" stop-color="#bcd994" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#bcd994" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="wLamp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7e2" stop-opacity="1"/>
+      <stop offset="34%" stop-color="#ffdb96" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffdb96" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="wHaze" cx="62%" cy="66%" r="62%">
+      <stop offset="0%" stop-color="#eadfbe" stop-opacity="0.17"/>
+      <stop offset="55%" stop-color="#cdbf96" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="wMicBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f231b"/>
+      <stop offset="30%" stop-color="#4e5643"/>
+      <stop offset="56%" stop-color="#343b2b"/>
+      <stop offset="100%" stop-color="#13160e"/>
+    </linearGradient>
+    <linearGradient id="wMicHead" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84916d"/>
+      <stop offset="35%" stop-color="#3c442f"/>
+      <stop offset="100%" stop-color="#11140d"/>
+    </linearGradient>
+    <linearGradient id="wStand" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0c0e09"/>
+      <stop offset="45%" stop-color="#414837"/>
+      <stop offset="60%" stop-color="#2c3225"/>
+      <stop offset="100%" stop-color="#0a0c08"/>
+    </linearGradient>
+
+    <linearGradient id="wTruss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c3224"/>
+      <stop offset="100%" stop-color="#0f120b"/>
+    </linearGradient>
+    <linearGradient id="wPa" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#191d13"/>
+      <stop offset="45%" stop-color="#2f3527"/>
+      <stop offset="100%" stop-color="#0d100a"/>
+    </linearGradient>
+
+    <!-- readability scrims so the copy stays razor sharp -->
+    <linearGradient id="wLeftScrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.96"/>
+      <stop offset="26%" stop-color="#030403" stop-opacity="0.88"/>
+      <stop offset="48%" stop-color="#030403" stop-opacity="0.58"/>
+      <stop offset="70%" stop-color="#030403" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wTopScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wBottomScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0"/>
+      <stop offset="52%" stop-color="#030403" stop-opacity="0.3"/>
+      <stop offset="82%" stop-color="#030403" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="1"/>
+    </linearGradient>
+
+    <filter id="wBloom" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- NIGHT AIR -->
+  <rect width="1600" height="900" fill="url(#wBackdrop)"/>
+  <rect width="1600" height="900" fill="url(#wAmbient)"/>
+
+  <!-- LIGHTING TRUSS -->
+  <g transform="translate(0,42)">
+    <rect x="-20" y="24" width="1640" height="13" rx="4" fill="url(#wTruss)" stroke="#080a06" stroke-width="2"/>
+    <rect x="-20" y="58" width="1640" height="10" rx="4" fill="url(#wTruss)" stroke="#080a06" stroke-width="2"/>
+    <g stroke="#242b1d" stroke-width="3">
+      <path d="M20 28 L110 28 L110 58 L20 58 M110 28 L200 28 L200 58 L110 58 M200 28 L290 28 L290 58 L200 58 M290 28 L380 28 L380 58 L290 58 M380 28 L470 28 L470 58 L380 58 M470 28 L560 28 L560 58 L470 58 M560 28 L650 28 L650 58 L560 58 M650 28 L740 28 L740 58 L650 58 M740 28 L830 28 L830 58 L740 58 M830 28 L920 28 L920 58 L830 58 M920 28 L1010 28 L1010 58 L920 58 M1010 28 L1100 28 L1100 58 L1010 58 M1100 28 L1190 28 L1190 58 L1100 58 M1190 28 L1280 28 L1280 58 L1190 58 M1280 28 L1370 28 L1370 58 L1280 58 M1370 28 L1460 28 L1460 58 L1370 58 M1460 28 L1550 28 L1550 58 L1460 58 M1550 28 L1640 28 L1640 58 L1550 58"/>
+    </g>
+    <g stroke="#2c3325" stroke-width="2" opacity="0.72">
+      <path d="M20 32 L110 58 M110 32 L200 58 M200 32 L290 58 M290 32 L380 58 M380 32 L470 58 M470 32 L560 58 M560 32 L650 58 M650 32 L740 58 M740 32 L830 58 M830 32 L920 58 M920 32 L1010 58 M1010 32 L1100 58 M1100 32 L1190 58 M1190 32 L1280 58 M1280 32 L1370 58 M1370 32 L1460 58 M1460 32 L1550 58 M1550 32 L1640 58"/>
+    </g>
+    <g stroke="#0a0c07" stroke-width="3">
+      <path d="M180 24 L180 0 M470 24 L470 0 M760 24 L760 0 M1050 24 L1050 0 M1340 24 L1340 0 M1540 24 L1540 0"/>
+    </g>
+
+    <!-- Lamp cans -->
+    <g>
+      <g transform="translate(320,74)"><circle cx="0" cy="0" r="54" fill="url(#wLamp)" opacity="0.82"/><path d="M-16 0 L16 0 L11 30 L-11 30 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/><ellipse cx="0" cy="30" rx="11" ry="4" fill="#ffe9bd"/></g>
+      <g transform="translate(760,74)"><circle cx="0" cy="0" r="50" fill="url(#wLamp)" opacity="0.78"/><path d="M-15 0 L15 0 L10 28 L-10 28 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/><ellipse cx="0" cy="28" rx="10" ry="4" fill="#e6f2cf"/></g>
+      <!-- key lamp aimed straight down onto the mic -->
+      <g transform="translate(1146,74)"><circle cx="0" cy="0" r="58" fill="url(#wLamp)" opacity="0.92"/><path d="M-17 0 L17 0 L12 31 L-12 31 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/><ellipse cx="0" cy="31" rx="12" ry="4" fill="#fff0c8"/></g>
+      <g transform="translate(1420,74)"><circle cx="0" cy="0" r="46" fill="url(#wLamp)" opacity="0.7"/><path d="M-14 0 L14 0 L9 26 L-9 26 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/><ellipse cx="0" cy="26" rx="9" ry="4" fill="#ffe9bd"/></g>
+    </g>
+  </g>
+
+  <!-- SPOTLIGHT BEAMS -->
+  <g>
+    <path d="M320 116 L188 820 L472 820 Z" fill="url(#wBeamWarm)" opacity="0.82"/>
+    <path d="M760 116 L640 820 L890 820 Z" fill="url(#wBeamCool)" opacity="0.82"/>
+    <!-- the mic key beam -->
+    <path d="M1146 116 L1010 800 L1302 800 Z" fill="url(#wBeamWarm)" opacity="0.95"/>
+    <path d="M1420 116 L1338 820 L1512 820 Z" fill="url(#wBeamCool)" opacity="0.78"/>
+  </g>
+
+  <!-- PA STACKS -->
+  <g transform="translate(120,392)">
+    <rect x="0" y="0" width="128" height="350" rx="6" fill="url(#wPa)" stroke="#0a0c07" stroke-width="3"/>
+    <circle cx="64" cy="76" r="46" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/><circle cx="64" cy="76" r="15" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <circle cx="64" cy="186" r="36" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/><circle cx="64" cy="186" r="12" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <rect x="30" y="258" width="68" height="56" rx="4" fill="#10130c" stroke="#242a1c" stroke-width="3"/><rect x="42" y="272" width="44" height="11" rx="3" fill="#242a1c"/>
+    <rect x="28" y="-14" width="72" height="14" rx="5" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+  </g>
+  <g transform="translate(1352,392)">
+    <rect x="0" y="0" width="128" height="350" rx="6" fill="url(#wPa)" stroke="#0a0c07" stroke-width="3"/>
+    <circle cx="64" cy="76" r="46" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/><circle cx="64" cy="76" r="15" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <circle cx="64" cy="186" r="36" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/><circle cx="64" cy="186" r="12" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <rect x="30" y="258" width="68" height="56" rx="4" fill="#10130c" stroke="#242a1c" stroke-width="3"/><rect x="42" y="272" width="44" height="11" rx="3" fill="#242a1c"/>
+    <rect x="28" y="-14" width="72" height="14" rx="5" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+  </g>
+
+  <!-- STAGE DECK -->
+  <path d="M0 664 L1600 664 L1600 900 L0 900 Z" fill="url(#wDeck)"/>
+  <g stroke="#0b0e07" stroke-width="2" opacity="0.8">
+    <path d="M120 664 L92 900 M300 664 L282 900 M480 664 L472 900 M660 664 L662 900 M840 664 L852 900 M1020 664 L1042 900 M1200 664 L1232 900 M1380 664 L1422 900 M1560 664 L1612 900"/>
+  </g>
+  <path d="M0 830 L1600 830 L1600 872 L0 872 Z" fill="#090c06"/>
+  <path d="M0 830 L1600 830 L1600 838 L0 838 Z" fill="#2c3325" opacity="0.8"/>
+  <ellipse cx="1146" cy="742" rx="300" ry="62" fill="#ffdba8" opacity="0.055"/>
+
+  <!-- MONITOR WEDGES -->
+  <g transform="translate(838,704)">
+    <path d="M0 58 L104 58 L114 0 L10 0 Z" fill="#15190f" stroke="#0a0c07" stroke-width="3"/>
+    <path d="M14 8 L108 8 L100 52 L22 52 Z" fill="#0d1009" stroke="#242a1c" stroke-width="2"/>
+    <circle cx="60" cy="30" r="14" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+  </g>
+  <g transform="translate(1252,704)">
+    <path d="M0 58 L104 58 L114 0 L10 0 Z" fill="#15190f" stroke="#0a0c07" stroke-width="3"/>
+    <path d="M14 8 L108 8 L100 52 L22 52 Z" fill="#0d1009" stroke="#242a1c" stroke-width="2"/>
+    <circle cx="60" cy="30" r="14" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+  </g>
+
+  <!-- ================= MICROPHONE ON STAND (centred in the key beam) ================= -->
+  <g transform="translate(1146,0)">
+    <ellipse cx="0" cy="858" rx="78" ry="17" fill="#000" opacity="0.88"/>
+    <path d="M-66 842 L66 842 L80 858 L-80 858 Z" fill="#14170f" stroke="#0a0c07" stroke-width="3"/>
+    <g stroke="url(#wStand)" stroke-width="11" stroke-linecap="round">
+      <path d="M-36 840 L-62 862"/>
+      <path d="M36 840 L62 862"/>
+      <path d="M0 840 L0 864"/>
+    </g>
+    <rect x="-7" y="636" width="14" height="208" fill="url(#wStand)" stroke="#0a0c07" stroke-width="2"/>
+    <rect x="-11" y="744" width="22" height="26" rx="4" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+    <g transform="rotate(-8 -7 636)">
+      <rect x="-5" y="466" width="10" height="172" fill="url(#wStand)" stroke="#0a0c07" stroke-width="2"/>
+    </g>
+    <g transform="translate(-16,458) rotate(-8)">
+      <path d="M-14 0 C-14 -12 14 -12 14 0 L14 34 C14 46 -14 46 -14 34 Z" fill="#12150e" stroke="#0a0c07" stroke-width="3"/>
+    </g>
+
+    <!-- Vintage microphone -->
+    <g transform="translate(-22,376) rotate(-8)">
+      <rect x="-30" y="-58" width="60" height="86" rx="14" fill="url(#wMicHead)" stroke="#0a0c07" stroke-width="3"/>
+      <g stroke="#0c0f08" stroke-width="2" opacity="0.85">
+        <path d="M-27 -44 L27 -44"/><path d="M-28 -30 L28 -30"/><path d="M-29 -16 L29 -16"/><path d="M-28 -2 L28 -2"/>
+      </g>
+      <path d="M-18 -52 Q-24 0 -16 24" stroke="#a9b78f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <rect x="-24" y="24" width="48" height="14" rx="4" fill="#0e1109" stroke="#0a0c07" stroke-width="2"/>
+      <path d="M-24 36 L24 36 L16 104 L-16 104 Z" fill="url(#wMicBody)" stroke="#0a0c07" stroke-width="3"/>
+      <path d="M-14 44 L-8 98" stroke="#6b775c" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+      <rect x="-18" y="100" width="36" height="12" rx="3" fill="#0e1109" stroke="#0a0c07" stroke-width="2"/>
+      <path d="M0 112 Q-8 150 4 186" stroke="#0a0c07" stroke-width="6" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <ellipse cx="-20" cy="858" rx="128" ry="23" fill="#ffdba8" opacity="0.1"/>
+    <circle cx="-22" cy="372" r="128" fill="#ffdba8" opacity="0.06" filter="url(#wBloom)"/>
+  </g>
+
+  <!-- ATMOSPHERE -->
+  <rect y="330" width="1600" height="570" fill="url(#wHaze)"/>
+  <ellipse cx="1146" cy="792" rx="520" ry="92" fill="#e8dcb8" opacity="0.05"/>
+  <ellipse cx="720" cy="838" rx="360" ry="70" fill="#e8dcb8" opacity="0.045"/>
+  <ellipse cx="1380" cy="858" rx="300" ry="56" fill="#e8dcb8" opacity="0.035"/>
+
+  <!-- Dust motes in the beams -->
+  <g fill="#ffeec4" opacity="0.5">
+    <circle cx="360" cy="300" r="2"/><circle cx="420" cy="452" r="1.6"/><circle cx="286" cy="560" r="2.2"/>
+    <circle cx="760" cy="382" r="1.8"/><circle cx="822" cy="548" r="2"/><circle cx="1102" cy="336" r="1.8"/>
+    <circle cx="1180" cy="486" r="2.1"/><circle cx="1068" cy="628" r="1.7"/><circle cx="1312" cy="402" r="1.8"/>
+  </g>
+
+  <!-- SCRIMS (fade into the copy) -->
+  <rect width="1600" height="900" fill="url(#wLeftScrim)"/>
+  <rect width="1600" height="900" fill="url(#wTopScrim)"/>
+  <rect width="1600" height="900" fill="url(#wBottomScrim)"/>
+</svg>

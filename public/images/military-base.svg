@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" fill="none">
+  <defs>
+    <!-- Dusk sky -->
+    <linearGradient id="mbSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1418"/>
+      <stop offset="28%" stop-color="#16262b"/>
+      <stop offset="52%" stop-color="#2c4148"/>
+      <stop offset="70%" stop-color="#5d5a45"/>
+      <stop offset="84%" stop-color="#a86a2c"/>
+      <stop offset="100%" stop-color="#d99237"/>
+    </linearGradient>
+
+    <radialGradient id="mbSunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd08a" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#ff9a3c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="mbCloud" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22333a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0d1519" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Ground planes -->
+    <linearGradient id="mbHills" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b3520"/>
+      <stop offset="100%" stop-color="#161d10"/>
+    </linearGradient>
+    <linearGradient id="mbYard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3c4227"/>
+      <stop offset="45%" stop-color="#2b301b"/>
+      <stop offset="100%" stop-color="#151809"/>
+    </linearGradient>
+
+    <!-- Olive structures -->
+    <linearGradient id="mbTent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b7a3e"/>
+      <stop offset="55%" stop-color="#414c25"/>
+      <stop offset="100%" stop-color="#222a12"/>
+    </linearGradient>
+    <linearGradient id="mbTentSide" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#37421d"/>
+      <stop offset="100%" stop-color="#161c0b"/>
+    </linearGradient>
+    <linearGradient id="mbBunker" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7d8a4d"/>
+      <stop offset="60%" stop-color="#4a5528"/>
+      <stop offset="100%" stop-color="#222912"/>
+    </linearGradient>
+    <linearGradient id="mbTruck" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5f6d35"/>
+      <stop offset="55%" stop-color="#39421e"/>
+      <stop offset="100%" stop-color="#1c2110"/>
+    </linearGradient>
+    <linearGradient id="mbArmour" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6a7544"/>
+      <stop offset="50%" stop-color="#3f4923"/>
+      <stop offset="100%" stop-color="#1a1f0e"/>
+    </linearGradient>
+    <linearGradient id="mbTower" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b2113"/>
+      <stop offset="45%" stop-color="#333c1e"/>
+      <stop offset="100%" stop-color="#0f1209"/>
+    </linearGradient>
+    <linearGradient id="mbCamo" width="100%" height="100%" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5c6a34"/>
+      <stop offset="100%" stop-color="#2b3317"/>
+    </linearGradient>
+
+    <radialGradient id="mbFlood" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe6b0" stop-opacity="0.95"/>
+      <stop offset="30%" stop-color="#ffd27a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mbBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe9c0" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="mbDust" cx="50%" cy="80%" r="70%">
+      <stop offset="0%" stop-color="#c9922f" stop-opacity="0.28"/>
+      <stop offset="60%" stop-color="#8a6a24" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text-readability scrims -->
+    <linearGradient id="mbLeftScrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.96"/>
+      <stop offset="26%" stop-color="#030403" stop-opacity="0.9"/>
+      <stop offset="46%" stop-color="#030403" stop-opacity="0.6"/>
+      <stop offset="66%" stop-color="#030403" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mbBottomScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#030403" stop-opacity="0.35"/>
+      <stop offset="82%" stop-color="#030403" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="mbTopScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= SKY ================= -->
+  <rect width="1600" height="900" fill="url(#mbSky)"/>
+  <circle cx="1180" cy="560" r="420" fill="url(#mbSunGlow)"/>
+
+  <!-- Dusk clouds -->
+  <g fill="url(#mbCloud)">
+    <ellipse cx="220" cy="150" rx="260" ry="52"/>
+    <ellipse cx="480" cy="215" rx="220" ry="40"/>
+    <ellipse cx="760" cy="130" rx="300" ry="46"/>
+    <ellipse cx="1080" cy="205" rx="250" ry="38"/>
+    <ellipse cx="1400" cy="150" rx="280" ry="48"/>
+    <ellipse cx="1500" cy="300" rx="220" ry="34"/>
+    <ellipse cx="300" cy="320" rx="240" ry="30"/>
+  </g>
+
+  <!-- Distant ridgeline -->
+  <path d="M0 596 L160 566 L320 592 L520 552 L700 588 L880 548 L1080 584 L1280 552 L1450 580 L1600 560 L1600 900 L0 900 Z" fill="url(#mbHills)" opacity="0.85"/>
+
+  <!-- ================= WATCHTOWERS ================= -->
+  <!-- Left tower -->
+  <g transform="translate(300,300)">
+    <path d="M-26 420 L-14 120 L14 120 L26 420 Z" fill="url(#mbTower)"/>
+    <path d="M-20 420 L-10 130 M20 420 L10 130" stroke="#0b0e06" stroke-width="3"/>
+    <rect x="-46" y="52" width="92" height="70" rx="4" fill="url(#mbTower)"/>
+    <path d="M-46 70 L46 70 M-46 92 L46 92" stroke="#0b0e06" stroke-width="3"/>
+    <path d="M-58 52 L58 52 L0 14 Z" fill="url(#mbCamo)" stroke="#0b0e06" stroke-width="3"/>
+    <rect x="-46" y="52" width="92" height="10" fill="#0d1108" opacity="0.7"/>
+    <!-- floodlight + beam -->
+    <rect x="26" y="62" width="16" height="10" rx="2" fill="#d9d2b4"/>
+    <path d="M42 66 L360 470 L120 470 Z" fill="url(#mbBeam)" opacity="0.55"/>
+    <!-- antenna -->
+    <path d="M-8 52 L-8 -18 M-8 -6 L14 6 M-8 -6 L-30 6" stroke="#14180d" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right tower -->
+  <g transform="translate(1360,320)">
+    <path d="M-24 400 L-13 110 L13 110 L24 400 Z" fill="url(#mbTower)"/>
+    <rect x="-42" y="44" width="84" height="66" rx="4" fill="url(#mbTower)"/>
+    <path d="M-42 62 L42 62 M-42 84 L42 84" stroke="#0b0e06" stroke-width="3"/>
+    <path d="M-54 44 L54 44 L0 8 Z" fill="url(#mbCamo)" stroke="#0b0e06" stroke-width="3"/>
+    <rect x="-40" y="44" width="80" height="9" fill="#0d1108" opacity="0.7"/>
+    <rect x="-44" y="54" width="16" height="10" rx="2" fill="#d9d2b4"/>
+    <path d="M-44 58 L-360 460 L-130 460 Z" fill="url(#mbBeam)" opacity="0.5"/>
+    <path d="M6 44 L6 -24 M6 -12 L30 0 M6 -12 L-18 0" stroke="#14180d" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Radio mast (center-right) -->
+  <g transform="translate(1120,300)" opacity="0.95">
+    <path d="M0 480 L-30 0 M0 480 L30 0" stroke="#141a0d" stroke-width="7"/>
+    <path d="M-14 360 L14 360 M-18 280 L18 280 M-22 200 L22 200 M-25 120 L25 120" stroke="#141a0d" stroke-width="5"/>
+    <path d="M-14 360 L14 280 M-18 280 L-14 360 M18 280 L-18 200 M-22 200 L18 120" stroke="#141a0d" stroke-width="3" opacity="0.7"/>
+    <circle cx="0" cy="-8" r="5" fill="#ff4d3d"/>
+  </g>
+
+  <!-- ================= MID-GROUND STRUCTURES ================= -->
+  <!-- Camouflage tents (left cluster) -->
+  <g transform="translate(90,520)">
+    <ellipse cx="150" cy="128" rx="200" ry="20" fill="#0b0e06" opacity="0.55"/>
+    <path d="M0 128 L120 0 L250 128 Z" fill="url(#mbTent)" stroke="#121708" stroke-width="4"/>
+    <path d="M120 0 L250 128 L120 128 Z" fill="url(#mbTentSide)"/>
+    <path d="M92 128 L120 44 L148 128 Z" fill="#0d1206"/>
+    <path d="M120 0 L120 -34 M120 -34 L156 -22 M120 -34 L84 -22" stroke="#14180d" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(400,560)">
+    <ellipse cx="130" cy="112" rx="170" ry="18" fill="#0b0e06" opacity="0.5"/>
+    <path d="M0 112 L105 0 L220 112 Z" fill="url(#mbTent)" stroke="#121708" stroke-width="4"/>
+    <path d="M105 0 L220 112 L105 112 Z" fill="url(#mbTentSide)"/>
+    <path d="M80 112 L105 38 L130 112 Z" fill="#0d1206"/>
+  </g>
+
+  <!-- Sandbag bunkers (center) -->
+  <g transform="translate(620,600)">
+    <ellipse cx="220" cy="128" rx="280" ry="22" fill="#0b0e06" opacity="0.5"/>
+    <g fill="url(#mbBunker)" stroke="#0d1106" stroke-width="3">
+      <rect x="0" y="86" width="70" height="34" rx="14"/>
+      <rect x="66" y="86" width="70" height="34" rx="14"/>
+      <rect x="132" y="86" width="70" height="34" rx="14"/>
+      <rect x="198" y="86" width="70" height="34" rx="14"/>
+      <rect x="264" y="86" width="70" height="34" rx="14"/>
+      <rect x="33" y="54" width="70" height="34" rx="14"/>
+      <rect x="99" y="54" width="70" height="34" rx="14"/>
+      <rect x="165" y="54" width="70" height="34" rx="14"/>
+      <rect x="231" y="54" width="70" height="34" rx="14"/>
+      <rect x="66" y="22" width="70" height="34" rx="14"/>
+      <rect x="132" y="22" width="70" height="34" rx="14"/>
+      <rect x="198" y="22" width="70" height="34" rx="14"/>
+    </g>
+  </g>
+
+  <!-- Army truck convoy (center-right) -->
+  <g transform="translate(880,588)">
+    <ellipse cx="300" cy="150" rx="330" ry="20" fill="#0b0e06" opacity="0.55"/>
+    <!-- Truck 1 -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="66" width="300" height="60" rx="6" fill="url(#mbTruck)" stroke="#0d1106" stroke-width="3.5"/>
+      <path d="M210 66 L210 26 Q210 14 224 14 L300 14 L300 66 Z" fill="url(#mbTruck)" stroke="#0d1106" stroke-width="3.5"/>
+      <rect x="228" y="30" width="62" height="24" rx="3" fill="#22331f" stroke="#0d1106" stroke-width="2.5"/>
+      <path d="M240 26 L240 14 M262 26 L262 14" stroke="#0d1106" stroke-width="2.5"/>
+      <rect x="16" y="46" width="150" height="26" rx="4" fill="#1a1f0e" opacity="0.8"/>
+      <circle cx="52" cy="130" r="26" fill="#0f1209" stroke="#050704" stroke-width="4"/>
+      <circle cx="52" cy="130" r="10" fill="#2b3320"/>
+      <circle cx="248" cy="130" r="26" fill="#0f1209" stroke="#050704" stroke-width="4"/>
+      <circle cx="248" cy="130" r="10" fill="#2b3320"/>
+    </g>
+    <!-- Truck 2 (behind) -->
+    <g transform="translate(330,18)" opacity="0.94">
+      <rect x="0" y="48" width="270" height="56" rx="6" fill="url(#mbTruck)" stroke="#0d1106" stroke-width="3.5"/>
+      <path d="M190 48 L190 12 Q190 0 204 0 L270 0 L270 48 Z" fill="url(#mbTruck)" stroke="#0d1106" stroke-width="3.5"/>
+      <rect x="206" y="14" width="56" height="22" rx="3" fill="#22331f" stroke="#0d1106" stroke-width="2.5"/>
+      <circle cx="46" cy="108" r="24" fill="#0f1209" stroke="#050704" stroke-width="4"/>
+      <circle cx="46" cy="108" r="9" fill="#2b3320"/>
+      <circle cx="224" cy="108" r="24" fill="#0f1209" stroke="#050704" stroke-width="4"/>
+      <circle cx="224" cy="108" r="9" fill="#2b3320"/>
+    </g>
+  </g>
+
+  <!-- Armoured personnel carrier (right foreground) -->
+  <g transform="translate(1180,660)">
+    <ellipse cx="190" cy="140" rx="230" ry="20" fill="#0b0e06" opacity="0.55"/>
+    <path d="M0 96 Q10 44 78 40 L250 40 Q322 46 340 96 L340 122 L0 122 Z" fill="url(#mbArmour)" stroke="#0d1106" stroke-width="4"/>
+    <path d="M96 44 L96 16 Q100 4 122 4 L214 4 L218 44 Z" fill="url(#mbArmour)" stroke="#0d1106" stroke-width="4"/>
+    <rect x="112" y="14" width="90" height="20" rx="3" fill="#1b2a18" stroke="#0d1106" stroke-width="2.5"/>
+    <path d="M262 60 L340 60 M262 78 L340 78 M262 96 L340 96" stroke="#0d1106" stroke-width="2.5" opacity="0.6"/>
+    <rect x="24" y="98" width="292" height="22" rx="6" fill="#0f1308"/>
+    <g fill="#0b0e06">
+      <circle cx="58" cy="118" r="24"/><circle cx="130" cy="118" r="24"/>
+      <circle cx="210" cy="118" r="24"/><circle cx="282" cy="118" r="24"/>
+    </g>
+    <g fill="#252c17">
+      <circle cx="58" cy="118" r="9"/><circle cx="130" cy="118" r="9"/>
+      <circle cx="210" cy="118" r="9"/><circle cx="282" cy="118" r="9"/>
+    </g>
+    <!-- turret stub -->
+    <rect x="120" y="8" width="70" height="12" rx="4" fill="#39421e"/>
+  </g>
+
+  <!-- Personnel silhouettes -->
+  <g fill="#0b0e06">
+    <g transform="translate(520,660)">
+      <circle cx="0" cy="-58" r="11"/>
+      <path d="M-9 -48 L9 -48 L13 0 L-13 0 Z"/>
+      <path d="M-9 -44 L-22 -20 L-18 -16 L-7 -34 Z"/>
+      <path d="M9 -44 L20 -22 L15 -18 L7 -34 Z"/>
+      <path d="M-7 0 L-3 34 L-9 34 L-11 6 Z M7 0 L4 34 L10 34 L12 6 Z"/>
+      <rect x="-13" y="-2" width="26" height="6" rx="2"/>
+    </g>
+    <g transform="translate(566,668) scale(0.94)">
+      <circle cx="0" cy="-58" r="11"/>
+      <path d="M-9 -48 L9 -48 L13 0 L-13 0 Z"/>
+      <path d="M9 -44 L20 -22 L15 -18 L7 -34 Z"/>
+      <path d="M-7 0 L-3 34 L-9 34 L-11 6 Z M7 0 L4 34 L10 34 L12 6 Z"/>
+      <rect x="-13" y="-2" width="26" height="6" rx="2"/>
+    </g>
+    <g transform="translate(1080,690) scale(0.9)">
+      <circle cx="0" cy="-58" r="11"/>
+      <path d="M-9 -48 L9 -48 L13 0 L-13 0 Z"/>
+      <path d="M-9 -44 L-22 -20 L-18 -16 L-7 -34 Z"/>
+      <path d="M-7 0 L-3 34 L-9 34 L-11 6 Z M7 0 L4 34 L10 34 L12 6 Z"/>
+      <rect x="-13" y="-2" width="26" height="6" rx="2"/>
+    </g>
+  </g>
+
+  <!-- ================= PERIMETER FENCE (foreground) ================= -->
+  <g transform="translate(0,742)">
+    <!-- posts -->
+    <g fill="#151a0c" stroke="#0b0e06" stroke-width="2">
+      <rect x="-10" y="0" width="18" height="158" rx="2"/>
+      <rect x="196" y="4" width="18" height="154" rx="2"/>
+      <rect x="404" y="0" width="18" height="158" rx="2"/>
+      <rect x="612" y="6" width="18" height="152" rx="2"/>
+      <rect x="820" y="0" width="18" height="158" rx="2"/>
+      <rect x="1028" y="6" width="18" height="152" rx="2"/>
+      <rect x="1236" y="2" width="18" height="156" rx="2"/>
+      <rect x="1444" y="8" width="18" height="150" rx="2"/>
+      <rect x="1592" y="4" width="18" height="154" rx="2"/>
+    </g>
+    <!-- mesh -->
+    <g stroke="#2a3320" stroke-width="2.5" opacity="0.95">
+      <path d="M8 22 L204 24 M8 46 L204 48 M8 70 L204 72 M8 94 L204 96 M8 118 L204 120 M8 140 L204 142"/>
+      <path d="M214 26 L412 22 M214 50 L412 46 M214 74 L412 70 M214 98 L412 94 M214 122 L412 118 M214 144 L412 142"/>
+      <path d="M422 22 L620 26 M422 46 L620 50 M422 70 L620 74 M422 94 L620 98 M422 118 L620 122 M422 142 L620 144"/>
+      <path d="M630 26 L828 22 M630 50 L828 46 M630 74 L828 70 M630 98 L828 94 M630 122 L828 118 M630 144 L828 142"/>
+      <path d="M838 22 L1036 26 M838 46 L1036 50 M838 70 L1036 74 M838 94 L1036 98 M838 118 L1036 122 M838 142 L1036 144"/>
+      <path d="M1046 26 L1244 22 M1046 50 L1244 46 M1046 74 L1244 70 M1046 98 L1244 94 M1046 122 L1244 118 M1046 144 L1244 142"/>
+      <path d="M1254 22 L1452 26 M1254 46 L1452 50 M1254 70 L1452 74 M1254 94 L1452 98 M1254 118 L1452 122 M1254 142 L1452 144"/>
+      <path d="M1462 26 L1600 24 M1462 50 L1600 48 M1462 74 L1600 72 M1462 98 L1600 96 M1462 122 L1600 120 M1462 144 L1600 142"/>
+    </g>
+    <!-- barbed wire coils -->
+    <g stroke="#0d1108" stroke-width="4" fill="none">
+      <path d="M-10 4 Q104 -22 204 2 Q306 24 412 0 Q516 -22 620 2 Q724 24 828 0 Q932 -22 1036 2 Q1140 24 1244 0 Q1348 -22 1452 2 Q1520 14 1600 4"/>
+    </g>
+    <g stroke="#3d4728" stroke-width="1.6" fill="none">
+      <path d="M-10 4 Q104 -22 204 2 Q306 24 412 0 Q516 -22 620 2 Q724 24 828 0 Q932 -22 1036 2 Q1140 24 1244 0 Q1348 -22 1452 2 Q1520 14 1600 4"/>
+    </g>
+  </g>
+
+  <!-- Dust haze across the yard -->
+  <rect y="380" width="1600" height="520" fill="url(#mbDust)"/>
+
+  <!-- ================= SCRIMS (fade into text) ================= -->
+  <rect width="1600" height="900" fill="url(#mbLeftScrim)"/>
+  <rect width="1600" height="900" fill="url(#mbTopScrim)"/>
+  <rect width="1600" height="900" fill="url(#mbBottomScrim)"/>
+</svg>

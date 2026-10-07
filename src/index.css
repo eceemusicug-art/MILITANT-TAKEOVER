@@ -1,0 +1,572 @@
+@import "tailwindcss";
+
+:root {
+  --army-accent-rgb: 145, 170, 96;
+  --army-highlight-rgb: 168, 193, 126;
+}
+
+@theme {
+  --font-display: "Anton", "Arial Narrow", "Impact", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Ink — near-black greens */
+  --color-ink-950: #050705;
+  --color-ink-900: #0a0e08;
+  --color-ink-800: #11160d;
+  --color-ink-700: #1a2114;
+
+  /* Camo greens */
+  --color-camo-200: #c3cda4;
+  --color-camo-300: #a3b184;
+  --color-camo-400: #83945f;
+  --color-camo-500: #65783f;
+  --color-camo-600: #4c5c30;
+  --color-camo-700: #374422;
+  --color-camo-800: #263018;
+  --color-camo-900: #181f0f;
+
+  /* Army green accents, shared by the existing flare utilities. */
+  --color-flare-300: #c4d9a3;
+  --color-flare-400: rgb(var(--army-highlight-rgb));
+  --color-flare-500: rgb(var(--army-accent-rgb));
+  --color-flare-600: #748d48;
+  --color-flare-700: #526b31;
+
+  /* Sand — off white text */
+  --color-sand-50: #f2f4ee;
+  --color-sand-200: #d7dcd0;
+  --color-sand-300: #b8bfae;
+  --color-sand-400: #939b89;
+  --color-sand-500: #6f7767;
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-kenburns: kenburns 28s ease-in-out infinite alternate;
+  --animate-float-slow: floatY 10s ease-in-out infinite;
+  --animate-blink: blink 1.1s step-end infinite;
+  --animate-pulse-dot: pulseDot 2.4s ease-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  @keyframes kenburns {
+    from {
+      transform: scale(1.03) translate(0, 0);
+    }
+    to {
+      transform: scale(1.15) translate(-1.5%, -2%);
+    }
+  }
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translateY(0px);
+      opacity: 0.35;
+    }
+    50% {
+      transform: translateY(-22px);
+      opacity: 0.9;
+    }
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes pulseDot {
+    0% {
+      box-shadow: 0 0 0 0 rgba(var(--army-accent-rgb), 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 14px rgba(var(--army-accent-rgb), 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(var(--army-accent-rgb), 0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-sand-50 font-sans antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #060905;
+  /* Multi-layered authentic military camouflage pattern */
+  background-image:
+    /* Layer 1: dark olive/camo organic shapes */
+    radial-gradient(ellipse 260px 180px at 15% 12%, rgba(92, 112, 58, 0.34) 0%, rgba(55, 68, 34, 0.16) 60%, transparent 80%),
+    radial-gradient(ellipse 320px 220px at 85% 25%, rgba(72, 90, 46, 0.3) 0%, rgba(38, 48, 24, 0.14) 65%, transparent 85%),
+    radial-gradient(ellipse 290px 200px at 45% 42%, rgba(116, 138, 72, 0.24) 0%, rgba(55, 68, 34, 0.12) 60%, transparent 80%),
+    radial-gradient(ellipse 340px 240px at 20% 68%, rgba(92, 112, 58, 0.3) 0%, rgba(38, 48, 24, 0.14) 65%, transparent 85%),
+    radial-gradient(ellipse 300px 210px at 80% 80%, rgba(101, 125, 60, 0.3) 0%, rgba(45, 58, 28, 0.12) 60%, transparent 80%),
+    radial-gradient(ellipse 250px 170px at 50% 92%, rgba(76, 95, 46, 0.26) 0%, transparent 75%),
+    /* Layer 2: seamless woodland camouflage repetitive pattern */
+    radial-gradient(32% 26% at 20% 28%, rgba(76, 96, 44, 0.42) 0% 50%, transparent 52%),
+    radial-gradient(28% 22% at 75% 22%, rgba(32, 42, 20, 0.5) 0% 48%, transparent 50%),
+    radial-gradient(35% 28% at 48% 68%, rgba(96, 120, 56, 0.34) 0% 52%, transparent 54%),
+    radial-gradient(30% 24% at 85% 72%, rgba(20, 26, 12, 0.55) 0% 50%, transparent 52%),
+    radial-gradient(26% 20% at 10% 80%, rgba(62, 80, 36, 0.38) 0% 48%, transparent 50%),
+    /* Layer 3: tactical military grid */
+    linear-gradient(rgba(131, 148, 95, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(131, 148, 95, 0.06) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    280px 280px,
+    280px 280px,
+    280px 280px,
+    280px 280px,
+    280px 280px,
+    56px 56px,
+    56px 56px;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--color-flare-500);
+  color: #050705;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050705;
+}
+::-webkit-scrollbar-thumb {
+  background: #263018;
+  border-radius: 999px;
+  border: 2px solid #050705;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374422;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-flare-400);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Custom utilities ---------- */
+
+/* ---------- Hero artist photo ----------
+   standin — temporary image, subject already on the right
+   frame   — real photo, full landscape frame (body ≈ 25–70% across, face ≈ 54%)
+   subject — real photo, tightly cropped / portrait cut-out
+   All presets keep the face out from under the headline copy.               */
+.hero-photo {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+/* Big full-bleed environment cover — oversized, anchored right so the
+   character + dome stay visible while copy sits in the faded left field */
+/* Cover portrait — the figure is composed on the right with black on the left,
+   so cover-fit at a right anchor keeps the face clear of the headline text */
+.hero-env-cover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% center;
+  transform: scale(1.06);
+  filter: saturate(1.06) contrast(1.06);
+  will-change: transform;
+}
+
+@media (max-width: 1023px) {
+  .hero-env-cover {
+    object-position: 74% 34%;
+  }
+}
+
+@keyframes heroDrift {
+  from {
+    transform: scale(1.12) translate(0, 0);
+  }
+  to {
+    transform: scale(1.18) translate(-1.2%, -1%);
+  }
+}
+
+.hero-env-drift {
+  animation: heroDrift 32s ease-in-out infinite alternate;
+}
+
+/* Olive poster duotone laid over the artwork */
+.hero-art-grade {
+  background:
+    radial-gradient(120% 90% at 76% 30%, rgba(var(--army-accent-rgb), 0.3), transparent 55%),
+    linear-gradient(
+      165deg,
+      rgba(var(--army-accent-rgb), 0.16) 0%,
+      rgba(101, 120, 63, 0.22) 55%,
+      rgba(3, 4, 3, 0) 100%
+    );
+  mix-blend-mode: overlay;
+}
+
+/* Halftone print grain, fading in from the right */
+.hero-art-halftone {
+  background-image: radial-gradient(rgba(3, 4, 3, 0.55) 1px, transparent 1.7px);
+  background-size: 7px 7px;
+  mix-blend-mode: multiply;
+  opacity: 0.28;
+  -webkit-mask-image: linear-gradient(90deg, transparent 25%, #000 90%);
+  mask-image: linear-gradient(90deg, transparent 25%, #000 90%);
+}
+
+.hero-photo--standin {
+  top: 3.25rem;
+  right: 0;
+  width: min(185vw, 950px);
+  height: auto;
+}
+
+/* Phones & tablets: photo on top, copy underneath, body centred. */
+.hero-photo--frame {
+  top: 3.5rem;
+  left: 50%;
+  width: min(170vw, 1000px);
+  height: auto;
+  transform: translateX(-47.5%);
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 97%, transparent 100%),
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 97%, transparent 100%),
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-composite: intersect;
+}
+
+.hero-photo--subject {
+  top: 3.5rem;
+  left: 50%;
+  width: min(128vw, 880px);
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  transform: translateX(-50%);
+  /* Keep top raised arm crisp while gently melting sides and bottom */
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 92%, transparent 100%),
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 92%, transparent 100%),
+    linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-composite: intersect;
+}
+
+.hero-cover-shade {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 4, 3, 0.08) 0%,
+    transparent 22%,
+    rgba(3, 4, 3, 0.16) 42%,
+    rgba(3, 4, 3, 0.72) 62%,
+    #030403 82%
+  );
+}
+
+@media (min-width: 1024px) {
+  .hero-photo--standin {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Desktop: full environment landscape cover backdrop */
+  .hero-photo--frame {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 85%, transparent 100%);
+  }
+
+  /* Desktop: large, cleanly framed subject in the right half */
+  .hero-photo--subject {
+    top: auto;
+    bottom: 0.75rem;
+    left: auto;
+    right: 1vw;
+    width: min(58vw, 980px);
+    height: min(97%, 84vw);
+    object-fit: contain;
+    object-position: center bottom;
+    transform: none;
+    -webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+  }
+
+  .hero-cover-shade {
+    background:
+      linear-gradient(90deg, rgba(3, 4, 3, 0.7), rgba(3, 4, 3, 0.1) 59%, transparent 75%),
+      linear-gradient(0deg, #030403, transparent 8%);
+  }
+}
+
+.glass {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(242, 244, 238, 0.8);
+  color: transparent;
+}
+
+.text-outline-camo {
+  -webkit-text-stroke: 1.5px rgba(131, 148, 95, 0.65);
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .text-outline,
+  .text-outline-camo {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+.noise {
+  position: relative;
+}
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.camo-veil {
+  background-image: url("/images/camo-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+}
+
+/* Background overlay with visible military woodland camo repeat */
+.army-pattern-bg {
+  position: relative;
+}
+.army-pattern-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.26;
+  background-image: url("/images/camo-texture.jpg");
+  background-size: 460px 460px;
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  filter: contrast(1.1);
+}
+
+/* Army-pattern section fill: a visible woodland camo field behind sections.
+   Dark enough to keep light body copy fully legible. */
+.army-fill {
+  background-color: #0a1007;
+  background-image:
+    radial-gradient(38% 30% at 14% 18%, rgba(110, 134, 66, 0.35) 0% 52%, transparent 55%),
+    radial-gradient(32% 26% at 72% 14%, rgba(34, 46, 20, 0.55) 0% 50%, transparent 53%),
+    radial-gradient(36% 30% at 46% 52%, rgba(96, 120, 56, 0.3) 0% 52%, transparent 55%),
+    radial-gradient(34% 28% at 88% 64%, rgba(24, 32, 14, 0.6) 0% 50%, transparent 53%),
+    radial-gradient(30% 24% at 8% 76%, rgba(84, 104, 50, 0.32) 0% 50%, transparent 53%),
+    radial-gradient(28% 22% at 58% 92%, rgba(48, 62, 26, 0.45) 0% 48%, transparent 51%),
+    linear-gradient(rgba(148, 163, 120, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 120, 0.045) 1px, transparent 1px);
+  background-size:
+    440px 440px,
+    440px 440px,
+    440px 440px,
+    440px 440px,
+    440px 440px,
+    440px 440px,
+    56px 56px,
+    56px 56px;
+}
+
+/* ---------- Militant system: procedural fills & tactical furniture ---------- */
+
+/* Two-tone camo blotches, fully procedural (no image dependency) */
+.camo-fill {
+  background-color: #12170c;
+  background-image:
+    radial-gradient(42% 34% at 16% 20%, rgba(76, 92, 48, 0.85) 0 54%, transparent 56%),
+    radial-gradient(30% 26% at 70% 14%, rgba(38, 48, 24, 0.95) 0 54%, transparent 56%),
+    radial-gradient(34% 30% at 46% 64%, rgba(101, 120, 63, 0.55) 0 54%, transparent 56%),
+    radial-gradient(38% 32% at 88% 70%, rgba(24, 31, 15, 0.98) 0 54%, transparent 56%),
+    radial-gradient(26% 22% at 6% 84%, rgba(76, 92, 48, 0.55) 0 54%, transparent 56%);
+  background-size: 240px 240px;
+}
+
+/* Same blotches, ghosted — for panels that should feel camouflaged but stay quiet */
+.camo-soft {
+  background-image:
+    radial-gradient(38% 30% at 20% 24%, rgba(76, 92, 48, 0.34) 0 54%, transparent 56%),
+    radial-gradient(28% 24% at 74% 18%, rgba(38, 48, 24, 0.42) 0 54%, transparent 56%),
+    radial-gradient(30% 26% at 48% 70%, rgba(101, 120, 63, 0.22) 0 54%, transparent 56%),
+    radial-gradient(34% 30% at 86% 76%, rgba(24, 31, 15, 0.5) 0 54%, transparent 56%);
+  background-size: 300px 300px;
+}
+
+/* Survey / targeting grid */
+.tactical-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 120, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 120, 0.07) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.dot-matrix {
+  background-image: radial-gradient(rgba(195, 205, 164, 0.16) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.radar-ring {
+  background-image:
+    radial-gradient(circle at center, transparent 0 22%, rgba(131, 148, 95, 0.16) 22.4% 23%, transparent 23.4%),
+    radial-gradient(circle at center, transparent 0 38%, rgba(131, 148, 95, 0.12) 38.4% 39%, transparent 39.4%),
+    radial-gradient(circle at center, transparent 0 54%, rgba(131, 148, 95, 0.09) 54.4% 55%, transparent 55.4%),
+    linear-gradient(90deg, transparent 49.8%, rgba(131, 148, 95, 0.14) 50%, transparent 50.2%),
+    linear-gradient(transparent 49.8%, rgba(131, 148, 95, 0.14) 50%, transparent 50.2%);
+}
+
+/* Caution bands */
+.hazard {
+  background-image: repeating-linear-gradient(135deg, var(--color-flare-500) 0 13px, #050705 13px 26px);
+}
+.hazard-camo {
+  background-image: repeating-linear-gradient(135deg, #65783f 0 12px, #0a0e08 12px 24px);
+}
+
+/* Chevron rank band */
+.chev-band {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cpath d='M4 5 L15 13 L4 21' fill='none' stroke='%2365783f' stroke-opacity='0.5' stroke-width='2.6' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+/* Targeting reticle corners */
+.reticle {
+  position: relative;
+}
+.reticle::before,
+.reticle::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  color: rgba(var(--army-accent-rgb), 0.65);
+}
+.reticle::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.reticle::after {
+  right: 10px;
+  bottom: 10px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+.reticle-green::before,
+.reticle-green::after {
+  color: rgba(131, 148, 95, 0.7);
+  border-color: rgba(131, 148, 95, 0.7);
+}
+
+/* Rubber-stamp mark */
+.stamp {
+  border: 2px solid rgba(var(--army-accent-rgb), 0.55);
+  color: rgba(var(--army-highlight-rgb), 0.9);
+  letter-spacing: 0.36em;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 1px rgba(var(--army-accent-rgb), 0.18);
+}
+.stamp-green {
+  border-color: rgba(131, 148, 95, 0.6);
+  color: rgba(163, 177, 132, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(131, 148, 95, 0.2);
+}
+
+/* Stencil cut — thin vertical slits through blocky display type */
+.stencil {
+  -webkit-mask-image: repeating-linear-gradient(90deg, #000 0 38px, transparent 38px 40.5px);
+  mask-image: repeating-linear-gradient(90deg, #000 0 38px, transparent 38px 40.5px);
+}
+
+.flare-btn {
+  background: linear-gradient(135deg, var(--color-flare-400) 0%, var(--color-flare-500) 45%, var(--color-flare-600) 100%);
+  box-shadow:
+    0 8px 28px -8px rgba(var(--army-accent-rgb), 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.flare-btn:hover {
+  box-shadow:
+    0 12px 40px -8px rgba(var(--army-accent-rgb), 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.card-lift {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

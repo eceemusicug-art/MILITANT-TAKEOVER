@@ -1,0 +1,388 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" fill="none">
+  <defs>
+    <!-- Black studio field with subtle depth behind the figure -->
+    <radialGradient id="ccBg" cx="72%" cy="34%" r="42%">
+      <stop offset="0%" stop-color="#161f12" stop-opacity="0.6"/>
+      <stop offset="55%" stop-color="#0a0e08" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#050705" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ccRim" cx="86%" cy="26%" r="34%">
+      <stop offset="0%" stop-color="#ff9a6b" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ff9a6b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ccFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Warm skin -->
+    <linearGradient id="ccSkin" x1="8%" y1="0%" x2="92%" y2="0%">
+      <stop offset="0%" stop-color="#2b1610"/>
+      <stop offset="32%" stop-color="#5a2e1d"/>
+      <stop offset="62%" stop-color="#7d4327"/>
+      <stop offset="88%" stop-color="#4d2415"/>
+      <stop offset="100%" stop-color="#2a140d"/>
+    </linearGradient>
+    <linearGradient id="ccHead" x1="5%" y1="0%" x2="95%" y2="0%">
+      <stop offset="0%" stop-color="#251209"/>
+      <stop offset="28%" stop-color="#542b1a"/>
+      <stop offset="58%" stop-color="#7a4126"/>
+      <stop offset="82%" stop-color="#5c2e1b"/>
+      <stop offset="100%" stop-color="#28130a"/>
+    </linearGradient>
+    <linearGradient id="ccSkinShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a35c36" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#a35c36" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Olive puffer vest -->
+    <linearGradient id="ccVest" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e2811"/>
+      <stop offset="28%" stop-color="#435427"/>
+      <stop offset="55%" stop-color="#5d7537"/>
+      <stop offset="82%" stop-color="#3f5024"/>
+      <stop offset="100%" stop-color="#1b2410"/>
+    </linearGradient>
+    <linearGradient id="ccVestFold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7d9a4c" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a2310" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- White tee -->
+    <linearGradient id="ccTee" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b9c1cd"/>
+      <stop offset="35%" stop-color="#f2f5f9"/>
+      <stop offset="65%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#aeb7c4"/>
+    </linearGradient>
+
+    <!-- Gold chain -->
+    <linearGradient id="ccGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe9a3"/>
+      <stop offset="45%" stop-color="#d3a83c"/>
+      <stop offset="100%" stop-color="#6f4d12"/>
+    </linearGradient>
+
+    <!-- Tiger stripe sleeve -->
+    <pattern id="ccTiger" width="86" height="62" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)">
+      <rect width="86" height="62" fill="#b8792c"/>
+      <path d="M-4 12 Q22 2 44 14 T90 10" stroke="#2c1a08" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M-4 32 Q26 22 52 34 T90 30" stroke="#3a2210" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M-4 52 Q20 44 46 54 T90 50" stroke="#1d1106" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <path d="M18 -4 Q26 20 16 44 T22 66" stroke="#e0a04a" stroke-width="4" fill="none" opacity="0.5"/>
+    </pattern>
+
+    <!-- Camo patch -->
+    <pattern id="ccCamo" width="70" height="56" patternUnits="userSpaceOnUse">
+      <rect width="70" height="56" fill="#4a5c2c"/>
+      <path d="M-4 10 Q14 0 32 12 T66 8 L66 26 Q44 16 24 24 T-4 26 Z" fill="#2d3a19"/>
+      <path d="M6 34 Q22 24 42 36 T74 30 L74 52 Q50 42 28 48 Z" fill="#6b7f42"/>
+      <circle cx="16" cy="46" r="6" fill="#1b2410"/>
+      <circle cx="54" cy="16" r="7" fill="#8a9e5a"/>
+    </pattern>
+
+    <filter id="ccGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ccSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+
+    <!-- Text-readability scrims: left side stays pure black for the headline -->
+    <linearGradient id="ccLeftScrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050705" stop-opacity="1"/>
+      <stop offset="22%" stop-color="#050705" stop-opacity="0.98"/>
+      <stop offset="44%" stop-color="#050705" stop-opacity="0.72"/>
+      <stop offset="62%" stop-color="#050705" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#050705" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ccBottomScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050705" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#050705" stop-opacity="0.3"/>
+      <stop offset="82%" stop-color="#050705" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#050705" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="ccTopScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050705" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#050705" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================= BLACK BACKDROP ================= -->
+  <rect width="1600" height="900" fill="#050705"/>
+  <rect width="1600" height="900" fill="url(#ccBg)"/>
+  <rect width="1600" height="900" fill="url(#ccRim)"/>
+
+  <!-- soft key-light bloom behind the figure -->
+  <ellipse cx="1180" cy="330" rx="330" ry="330" fill="#ffb48a" opacity="0.07" filter="url(#ccSoft)"/>
+
+  <!-- floor shadow -->
+  <ellipse cx="1190" cy="880" rx="260" ry="34" fill="url(#ccFloor)"/>
+
+  <!-- ================= FIGURE (right side, face clear of the text) ================= -->
+  <g id="ecee-cover-figure">
+
+    <!-- ---------- LEFT ARM (viewer right) — bare skin, hand at the front ---------- -->
+    <g id="arm-left">
+      <path d="M1352 492 L1428 646" stroke="url(#ccSkin)" stroke-width="74" stroke-linecap="round" fill="none"/>
+      <path d="M1428 646 L1268 762" stroke="url(#ccSkin)" stroke-width="66" stroke-linecap="round" fill="none"/>
+      <!-- white cuff at the wrist -->
+      <rect x="1244" y="726" width="62" height="26" rx="9" fill="#eef1f6" transform="rotate(38 1275 739)"/>
+      <!-- C-hand -->
+      <g transform="translate(1258,776) rotate(38)">
+        <path d="M -22,-8 C -38,-8 -46,18 -43,42 C -40,64 -16,72 4,67 C 24,62 32,44 29,28 C 26,12 8,22 3,29 C -5,39 -19,36 -22,22 C -25,6 -6,9 0,4 C -9,-5 -14,-8 -22,-8 Z" fill="url(#ccSkin)" stroke="#26130b" stroke-width="4"/>
+      </g>
+    </g>
+
+    <!-- ---------- TORSO: white tee + olive puffer vest ---------- -->
+    <g id="torso">
+      <!-- shoulders / base -->
+      <path d="M1042 486 Q1200 442 1358 486 L1330 900 L1070 900 Z" fill="url(#ccSkin)" stroke="#22110a" stroke-width="4"/>
+
+      <!-- white crewneck tee (centre panel) -->
+      <path d="M1146 452 L1254 452 L1266 900 L1134 900 Z" fill="url(#ccTee)" stroke="#a9b2c0" stroke-width="3"/>
+      <!-- tee ribbing + soft folds -->
+      <g stroke="#d3d9e3" stroke-width="2" opacity="0.8">
+        <line x1="1160" y1="560" x2="1160" y2="880"/>
+        <line x1="1180" y1="545" x2="1180" y2="880"/>
+        <line x1="1200" y1="540" x2="1200" y2="880"/>
+        <line x1="1220" y1="545" x2="1220" y2="880"/>
+        <line x1="1240" y1="560" x2="1240" y2="880"/>
+      </g>
+      <path d="M1150 700 Q1200 716 1250 700" stroke="#c3cad6" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M1146 780 Q1200 796 1254 780" stroke="#c3cad6" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <!-- tee collar -->
+      <path d="M1146 452 Q1200 496 1254 452" stroke="#aeb7c4" stroke-width="4" fill="none"/>
+
+      <!-- LEFT vest panel -->
+      <path d="M1042 486 L1150 452 L1140 900 L1050 900 Z" fill="url(#ccVest)" stroke="#18210e" stroke-width="4"/>
+      <!-- quilted baffles -->
+      <g stroke="#2b3818" stroke-width="3" opacity="0.75">
+        <path d="M1046 540 L1148 540"/>
+        <path d="M1044 600 L1146 600"/>
+        <path d="M1043 660 L1144 660"/>
+        <path d="M1042 720 L1142 720"/>
+        <path d="M1041 780 L1140 780"/>
+        <path d="M1040 840 L1139 840"/>
+      </g>
+      <g stroke="#8aa455" stroke-width="2" opacity="0.45">
+        <path d="M1052 552 Q1100 560 1140 552"/>
+        <path d="M1050 612 Q1100 620 1138 612"/>
+        <path d="M1049 672 Q1100 680 1136 672"/>
+        <path d="M1048 732 Q1100 740 1134 732"/>
+        <path d="M1047 792 Q1100 800 1132 792"/>
+      </g>
+      <!-- vertical zip -->
+      <line x1="1152" y1="470" x2="1142" y2="880" stroke="#11180a" stroke-width="5"/>
+
+      <!-- RIGHT vest panel -->
+      <path d="M1358 486 L1250 452 L1260 900 L1350 900 Z" fill="url(#ccVest)" stroke="#18210e" stroke-width="4"/>
+      <g stroke="#2b3818" stroke-width="3" opacity="0.75">
+        <path d="M1252 540 L1154 540"/>
+        <path d="M1254 600 L1156 600"/>
+        <path d="M1257 660 L1156 660"/>
+        <path d="M1258 720 L1158 720"/>
+        <path d="M1259 780 L1160 780"/>
+        <path d="M1260 840 L1161 840"/>
+      </g>
+      <g stroke="#8aa455" stroke-width="2" opacity="0.45">
+        <path d="M1248 552 Q1200 560 1160 552"/>
+        <path d="M1250 612 Q1200 620 1162 612"/>
+        <path d="M1251 672 Q1200 680 1164 672"/>
+        <path d="M1252 732 Q1200 740 1166 732"/>
+        <path d="M1253 792 Q1200 800 1168 792"/>
+      </g>
+      <line x1="1248" y1="470" x2="1258" y2="880" stroke="#11180a" stroke-width="5"/>
+
+      <!-- vest collar lapels -->
+      <path d="M1042 486 L1150 452 L1122 420 L1046 470 Z" fill="#4d6129" stroke="#18210e" stroke-width="4"/>
+      <path d="M1358 486 L1250 452 L1278 420 L1354 470 Z" fill="#4d6129" stroke="#18210e" stroke-width="4"/>
+    </g>
+
+    <!-- ---------- RHINESTONES on the vest shoulder ---------- -->
+    <g id="vest-rhinestones" filter="url(#ccGlow)">
+      <circle cx="1075" cy="500" r="6" fill="#ff4d6d"/>
+      <circle cx="1100" cy="482" r="5" fill="#4dd0ff"/>
+      <circle cx="1122" cy="470" r="6" fill="#ffd24d"/>
+      <circle cx="1092" cy="522" r="5" fill="#7dff9b"/>
+      <circle cx="1062" cy="540" r="5" fill="#c9a0ff"/>
+      <circle cx="1325" cy="500" r="6" fill="#4dd0ff"/>
+      <circle cx="1300" cy="482" r="5" fill="#ff4d6d"/>
+      <circle cx="1278" cy="470" r="6" fill="#7dff9b"/>
+      <circle cx="1308" cy="522" r="5" fill="#ffd24d"/>
+      <circle cx="1338" cy="540" r="5" fill="#ff9ad5"/>
+    </g>
+
+    <!-- ---------- RAISED RIGHT ARM — tiger/camo sleeve, fist at the temple ---------- -->
+    <g id="arm-raised">
+      <!-- upper arm -->
+      <path d="M1058 494 L884 402" stroke="url(#ccTiger)" stroke-width="82" stroke-linecap="round" fill="none"/>
+      <!-- forearm -->
+      <path d="M884 402 L1096 246" stroke="url(#ccTiger)" stroke-width="72" stroke-linecap="round" fill="none"/>
+      <!-- camo shoulder patch -->
+      <path d="M1040 470 L1108 452 L1092 512 L1030 520 Z" fill="url(#ccCamo)" opacity="0.9"/>
+      <!-- sleeve outline -->
+      <path d="M1058 494 L884 402" stroke="#1d1106" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.5"/>
+      <path d="M884 402 L1096 246" stroke="#1d1106" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+      <!-- sleeve rhinestones -->
+      <g filter="url(#ccGlow)">
+        <circle cx="1020" cy="470" r="5" fill="#4dd0ff"/>
+        <circle cx="988" cy="450" r="6" fill="#ff4d6d"/>
+        <circle cx="958" cy="432" r="5" fill="#ffd24d"/>
+        <circle cx="928" cy="416" r="6" fill="#7dff9b"/>
+        <circle cx="946" cy="452" r="4" fill="#c9a0ff"/>
+        <circle cx="912" cy="378" r="5" fill="#ff9ad5"/>
+        <circle cx="952" cy="352" r="6" fill="#4dd0ff"/>
+        <circle cx="996" cy="312" r="5" fill="#ffd24d"/>
+        <circle cx="1042" cy="278" r="6" fill="#ff4d6d"/>
+        <circle cx="1078" cy="258" r="4" fill="#7dff9b"/>
+      </g>
+
+      <!-- white cuff at the wrist -->
+      <rect x="1078" y="228" width="58" height="26" rx="9" fill="#eef1f6" transform="rotate(-52 1107 241)"/>
+
+      <!-- clenched fist at the temple -->
+      <g id="fist" transform="translate(1098,214) rotate(-52)">
+        <path d="M -34,-6 C -54,-6 -64,24 -60,50 C -56,76 -26,86 0,80 C 26,74 36,52 32,32 C 28,12 6,24 0,32 C -10,44 -28,40 -32,22 C -36,2 -12,6 -4,0 C -16,-12 -22,-14 -34,-6 Z" fill="url(#ccSkin)" stroke="#26130b" stroke-width="4"/>
+        <!-- knuckle creases -->
+        <g stroke="#3d1d11" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8">
+          <path d="M-22 8 Q-14 22 -20 34"/>
+          <path d="M-4 4 Q4 20 -2 34"/>
+          <path d="M14 8 Q22 22 16 34"/>
+        </g>
+        <!-- thumb -->
+        <path d="M-30 26 Q-46 30 -44 46 Q-42 58 -28 56" stroke="url(#ccSkin)" stroke-width="16" stroke-linecap="round" fill="none"/>
+      </g>
+    </g>
+
+    <!-- ---------- NECK + GOLD CHAIN ---------- -->
+    <g id="neck-chain">
+      <rect x="1176" y="352" width="52" height="112" rx="12" fill="#3a1c11" stroke="#22110a" stroke-width="3"/>
+      <ellipse cx="1202" cy="360" rx="27" ry="8" fill="#5c2e1b"/>
+      <!-- chain -->
+      <path d="M1152 452 Q1202 534 1252 452" stroke="url(#ccGold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M1158 458 Q1202 526 1246 458" stroke="#fff0b8" stroke-width="2" fill="none" opacity="0.85"/>
+      <!-- pendant -->
+      <circle cx="1202" cy="530" r="9" fill="url(#ccGold)" stroke="#5f4210" stroke-width="2"/>
+      <circle cx="1202" cy="530" r="4" fill="#fff3c4"/>
+    </g>
+
+    <!-- ---------- HEAD ---------- -->
+    <g id="head">
+      <!-- neck shadow under the jaw -->
+      <ellipse cx="1200" cy="382" rx="62" ry="18" fill="#22110a" opacity="0.6"/>
+
+      <!-- dreadlocks (behind the head) -->
+      <g stroke="#0b0b0e" stroke-linecap="round" fill="none">
+        <path d="M1096 190 Q1062 250 1066 330" stroke-width="26"/>
+        <path d="M1112 168 Q1074 236 1080 330" stroke-width="28"/>
+        <path d="M1136 150 Q1104 226 1112 322" stroke-width="24"/>
+        <path d="M1264 150 Q1296 226 1288 322" stroke-width="24"/>
+        <path d="M1288 168 Q1326 236 1320 330" stroke-width="28"/>
+        <path d="M1304 190 Q1338 250 1334 330" stroke-width="26"/>
+        <path d="M1084 210 Q1052 268 1058 336" stroke-width="20"/>
+        <path d="M1316 210 Q1348 268 1342 336" stroke-width="20"/>
+      </g>
+      <g stroke="#2e313c" stroke-linecap="round" fill="none" opacity="0.55">
+        <path d="M1096 190 Q1062 250 1066 330" stroke-width="8"/>
+        <path d="M1112 168 Q1074 236 1080 330" stroke-width="9"/>
+        <path d="M1136 150 Q1104 226 1112 322" stroke-width="7"/>
+        <path d="M1264 150 Q1296 226 1288 322" stroke-width="7"/>
+        <path d="M1288 168 Q1326 236 1320 330" stroke-width="9"/>
+        <path d="M1304 190 Q1338 250 1334 330" stroke-width="8"/>
+      </g>
+
+      <!-- face -->
+      <rect x="1098" y="128" width="204" height="264" rx="92" fill="url(#ccHead)" stroke="#1e0e08" stroke-width="5"/>
+      <!-- forehead shine -->
+      <ellipse cx="1150" cy="180" rx="42" ry="24" fill="url(#ccSkinShine)" transform="rotate(-16 1150 180)"/>
+      <ellipse cx="1252" cy="180" rx="36" ry="20" fill="url(#ccSkinShine)" transform="rotate(16 1252 180)"/>
+
+      <!-- ears -->
+      <ellipse cx="1094" cy="262" rx="16" ry="26" fill="#4a2314" stroke="#22110a" stroke-width="3"/>
+      <ellipse cx="1306" cy="262" rx="16" ry="26" fill="#4a2314" stroke="#22110a" stroke-width="3"/>
+
+      <!-- brows (raised, expressive) -->
+      <path d="M1140 208 Q1168 190 1196 206" stroke="#0d0a08" stroke-width="11" stroke-linecap="round" fill="none"/>
+      <path d="M1204 206 Q1232 190 1260 208" stroke="#0d0a08" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+      <!-- laughing closed eyes -->
+      <path d="M1140 252 Q1168 226 1196 252" stroke="#0a0806" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M1204 252 Q1232 226 1260 252" stroke="#0a0806" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <!-- crow's feet -->
+      <g stroke="#3d1d11" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75">
+        <path d="M1128 244 L1114 236"/>
+        <path d="M1128 258 L1112 256"/>
+        <path d="M1272 244 L1286 236"/>
+        <path d="M1272 258 L1288 256"/>
+      </g>
+
+      <!-- nose -->
+      <path d="M1196 268 Q1188 300 1200 312 Q1212 312 1222 300" stroke="#33170e" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <ellipse cx="1188" cy="312" rx="7" ry="5" fill="#1e0d07"/>
+      <ellipse cx="1216" cy="312" rx="7" ry="5" fill="#1e0d07"/>
+      <!-- nose bridge shading -->
+      <path d="M1202 250 Q1194 286 1202 306" stroke="#3a1b10" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+      <!-- wide open joyful grin -->
+      <path d="M1150 330 Q1202 344 1254 330 Q1260 396 1202 404 Q1144 396 1150 330 Z" fill="#150503" stroke="#0a0302" stroke-width="4"/>
+      <!-- upper teeth -->
+      <path d="M1156 333 Q1202 346 1248 333 Q1244 366 1202 368 Q1160 366 1156 333 Z" fill="#ffffff"/>
+      <g stroke="#ccd2da" stroke-width="1.6">
+        <line x1="1178" y1="337" x2="1177" y2="364"/>
+        <line x1="1202" y1="338" x2="1202" y2="367"/>
+        <line x1="1226" y1="337" x2="1227" y2="364"/>
+      </g>
+      <!-- tongue -->
+      <path d="M1174 388 Q1202 378 1230 388 Q1218 404 1202 404 Q1186 404 1174 388 Z" fill="#c94a58"/>
+      <!-- lower lip shadow -->
+      <path d="M1156 396 Q1202 410 1248 396" stroke="#24100a" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+      <!-- cheek laugh lines + smile creases -->
+      <g stroke="#33170e" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.7">
+        <path d="M1136 316 Q1128 330 1134 346"/>
+        <path d="M1268 316 Q1276 330 1270 346"/>
+        <path d="M1144 350 Q1138 360 1142 370"/>
+        <path d="M1260 350 Q1266 360 1262 370"/>
+      </g>
+
+      <!-- chin shadow -->
+      <path d="M1170 402 Q1202 418 1234 402" stroke="#2a130c" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+      <!-- short twisted braids at the temples -->
+      <g fill="#0b0b0e">
+        <circle cx="1104" cy="176" r="13"/>
+        <circle cx="1092" cy="204" r="12"/>
+        <circle cx="1100" cy="232" r="11"/>
+        <circle cx="1298" cy="176" r="13"/>
+        <circle cx="1310" cy="204" r="12"/>
+        <circle cx="1302" cy="232" r="11"/>
+        <circle cx="1122" cy="146" r="12"/>
+        <circle cx="1146" cy="136" r="11"/>
+        <circle cx="1172" cy="130" r="10"/>
+        <circle cx="1200" cy="128" r="10"/>
+        <circle cx="1228" cy="130" r="10"/>
+        <circle cx="1254" cy="136" r="11"/>
+        <circle cx="1278" cy="146" r="12"/>
+      </g>
+      <g fill="#2e313c" opacity="0.6">
+        <circle cx="1100" cy="172" r="5"/>
+        <circle cx="1088" cy="200" r="4"/>
+        <circle cx="1296" cy="172" r="5"/>
+        <circle cx="1308" cy="200" r="4"/>
+      </g>
+    </g>
+
+    <!-- warm rim light down the right edge of the figure -->
+    <path d="M1330 500 Q1360 620 1340 760" stroke="#ff9a6b" stroke-width="6" fill="none" opacity="0.35" filter="url(#ccGlow)"/>
+    <path d="M1306 160 Q1326 250 1320 330" stroke="#ff9a6b" stroke-width="5" fill="none" opacity="0.4" filter="url(#ccGlow)"/>
+  </g>
+
+  <!-- ================= SCRIMS (fade into the hero text) ================= -->
+  <rect width="1600" height="900" fill="url(#ccLeftScrim)"/>
+  <rect width="1600" height="900" fill="url(#ccTopScrim)"/>
+  <rect width="1600" height="900" fill="url(#ccBottomScrim)"/>
+</svg>

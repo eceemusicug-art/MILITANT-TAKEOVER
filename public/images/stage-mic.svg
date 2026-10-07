@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" width="900" height="1000" fill="none">
+  <defs>
+    <!-- Night air / backdrop -->
+    <radialGradient id="stageAmbient" cx="50%" cy="18%" r="75%">
+      <stop offset="0%" stop-color="#1d2a17" stop-opacity="0.75"/>
+      <stop offset="45%" stop-color="#0c1209" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="backdropWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f09"/>
+      <stop offset="55%" stop-color="#0a0d08"/>
+      <stop offset="100%" stop-color="#050705"/>
+    </linearGradient>
+
+    <!-- Stage deck -->
+    <linearGradient id="stageDeck" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b3419"/>
+      <stop offset="35%" stop-color="#1b2110"/>
+      <stop offset="100%" stop-color="#080a06"/>
+    </linearGradient>
+
+    <!-- Spotlight beams -->
+    <linearGradient id="beamWarm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffdba8" stop-opacity="0.5"/>
+      <stop offset="45%" stop-color="#ffc978" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffc978" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamCool" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dff0c4" stop-opacity="0.42"/>
+      <stop offset="45%" stop-color="#b9d68c" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#b9d68c" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Lamp core glow -->
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4dc" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#ffd78e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffd78e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Stage haze -->
+    <radialGradient id="haze" cx="50%" cy="62%" r="60%">
+      <stop offset="0%" stop-color="#e8dcb8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#cbbd93" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mic body -->
+    <linearGradient id="micBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#20241c"/>
+      <stop offset="30%" stop-color="#4b5340"/>
+      <stop offset="55%" stop-color="#333a29"/>
+      <stop offset="100%" stop-color="#14170f"/>
+    </linearGradient>
+    <linearGradient id="micHead" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7d8a6b"/>
+      <stop offset="35%" stop-color="#39412e"/>
+      <stop offset="100%" stop-color="#12150e"/>
+    </linearGradient>
+    <linearGradient id="micCapsule" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8e9b78"/>
+      <stop offset="50%" stop-color="#454e37"/>
+      <stop offset="100%" stop-color="#171b12"/>
+    </linearGradient>
+
+    <!-- Stand -->
+    <linearGradient id="standMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d0f0a"/>
+      <stop offset="45%" stop-color="#3f4634"/>
+      <stop offset="60%" stop-color="#2b3124"/>
+      <stop offset="100%" stop-color="#0b0d08"/>
+    </linearGradient>
+
+    <!-- Truss & speakers -->
+    <linearGradient id="truss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b3123"/>
+      <stop offset="100%" stop-color="#10130c"/>
+    </linearGradient>
+    <linearGradient id="paCab" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#191d13"/>
+      <stop offset="45%" stop-color="#2d3325"/>
+      <stop offset="100%" stop-color="#0e110b"/>
+    </linearGradient>
+
+    <!-- Text scrims: keeps headline + countdown readable -->
+    <linearGradient id="stageLeftScrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.96"/>
+      <stop offset="24%" stop-color="#030403" stop-opacity="0.9"/>
+      <stop offset="46%" stop-color="#030403" stop-opacity="0.62"/>
+      <stop offset="66%" stop-color="#030403" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stageBottomScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#030403" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#030403" stop-opacity="0.82"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="stageTopScrim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#030403" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ================= NIGHT AIR & BACKDROP ================= -->
+  <rect width="900" height="1000" fill="url(#backdropWall)"/>
+  <rect width="900" height="1000" fill="url(#stageAmbient)"/>
+
+  <!-- ================= LIGHTING TRUSS ================= -->
+  <g id="truss" transform="translate(0,60)">
+    <!-- truss rails -->
+    <rect x="-20" y="26" width="940" height="14" rx="4" fill="url(#truss)" stroke="#080a06" stroke-width="2"/>
+    <rect x="-20" y="62" width="940" height="10" rx="4" fill="url(#truss)" stroke="#080a06" stroke-width="2"/>
+    <!-- cross bracing -->
+    <g stroke="#232a1c" stroke-width="3">
+      <path d="M20 30 L110 30 L110 62 L20 62"/>
+      <path d="M110 30 L200 30 L200 62 L110 62"/>
+      <path d="M200 30 L290 30 L290 62 L200 62"/>
+      <path d="M290 30 L380 30 L380 62 L290 62"/>
+      <path d="M380 30 L470 30 L470 62 L380 62"/>
+      <path d="M470 30 L560 30 L560 62 L470 62"/>
+      <path d="M560 30 L650 30 L650 62 L560 62"/>
+      <path d="M650 30 L740 30 L740 62 L650 62"/>
+      <path d="M740 30 L830 30 L830 62 L740 62"/>
+      <path d="M830 30 L900 30 L900 62 L830 62"/>
+    </g>
+    <g stroke="#2b3123" stroke-width="2" opacity="0.75">
+      <path d="M20 40 L110 62 M110 40 L200 62 M200 40 L290 62 M290 40 L380 62 M380 40 L470 62 M470 40 L560 62 M560 40 L650 62 M650 40 L740 62 M740 40 L830 62 M830 40 L900 62"/>
+    </g>
+    <!-- hang cables -->
+    <g stroke="#0a0c07" stroke-width="3">
+      <path d="M110 26 L110 0 M290 26 L290 0 M470 26 L470 0 M650 26 L650 0 M830 26 L830 0"/>
+    </g>
+
+    <!-- Lamp cans on truss -->
+    <g id="lamp-cans">
+      <!-- Warm key lamp -->
+      <g transform="translate(190,78)">
+        <circle cx="0" cy="0" r="52" fill="url(#lampGlow)" opacity="0.85"/>
+        <path d="M-16 0 L16 0 L11 30 L-11 30 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+        <ellipse cx="0" cy="30" rx="11" ry="4" fill="#ffe9bd"/>
+      </g>
+      <!-- Cool fill lamp -->
+      <g transform="translate(452,78)">
+        <circle cx="0" cy="0" r="48" fill="url(#lampGlow)" opacity="0.75"/>
+        <path d="M-15 0 L15 0 L10 28 L-10 28 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+        <ellipse cx="0" cy="28" rx="10" ry="4" fill="#e6f2cf"/>
+      </g>
+      <!-- Warm back lamp -->
+      <g transform="translate(712,78)">
+        <circle cx="0" cy="0" r="46" fill="url(#lampGlow)" opacity="0.7"/>
+        <path d="M-14 0 L14 0 L9 26 L-9 26 Z" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+        <ellipse cx="0" cy="26" rx="9" ry="4" fill="#ffe9bd"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= SPOTLIGHT BEAMS ================= -->
+  <g id="beams">
+    <!-- left warm beam -->
+    <path d="M180 140 L100 880 L300 880 Z" fill="url(#beamWarm)" opacity="0.85"/>
+    <!-- center key beam down onto the mic -->
+    <path d="M450 140 L330 820 L570 820 Z" fill="url(#beamWarm)" opacity="0.9"/>
+    <!-- right cool beam -->
+    <path d="M712 140 L620 880 L820 880 Z" fill="url(#beamCool)" opacity="0.8"/>
+  </g>
+
+  <!-- ================= PA SPEAKER STACKS ================= -->
+  <g id="pa-left" transform="translate(28,430)">
+    <rect x="0" y="0" width="120" height="330" rx="6" fill="url(#paCab)" stroke="#0a0c07" stroke-width="3"/>
+    <!-- sub -->
+    <circle cx="60" cy="70" r="44" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/>
+    <circle cx="60" cy="70" r="14" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <!-- mid -->
+    <circle cx="60" cy="175" r="34" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/>
+    <circle cx="60" cy="175" r="11" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <!-- horn -->
+    <rect x="30" y="240" width="60" height="52" rx="4" fill="#10130c" stroke="#242a1c" stroke-width="3"/>
+    <rect x="40" y="252" width="40" height="10" rx="3" fill="#242a1c"/>
+    <!-- handle -->
+    <rect x="26" y="-14" width="68" height="14" rx="5" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+  </g>
+
+  <g id="pa-right" transform="translate(752,430)">
+    <rect x="0" y="0" width="120" height="330" rx="6" fill="url(#paCab)" stroke="#0a0c07" stroke-width="3"/>
+    <circle cx="60" cy="70" r="44" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/>
+    <circle cx="60" cy="70" r="14" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <circle cx="60" cy="175" r="34" fill="#0a0c07" stroke="#242a1c" stroke-width="3"/>
+    <circle cx="60" cy="175" r="11" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+    <rect x="30" y="240" width="60" height="52" rx="4" fill="#10130c" stroke="#242a1c" stroke-width="3"/>
+    <rect x="40" y="252" width="40" height="10" rx="3" fill="#242a1c"/>
+    <rect x="26" y="-14" width="68" height="14" rx="5" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+  </g>
+
+  <!-- ================= STAGE DECK ================= -->
+  <g id="stage">
+    <!-- back riser lip -->
+    <path d="M60 700 L840 700 L860 760 L40 760 Z" fill="#151a0e"/>
+    <!-- main deck -->
+    <path d="M20 760 L880 760 L900 1000 L0 1000 Z" fill="url(#stageDeck)"/>
+    <!-- deck plank seams -->
+    <g stroke="#0b0e07" stroke-width="2" opacity="0.85">
+      <path d="M60 760 L52 1000"/>
+      <path d="M170 760 L165 1000"/>
+      <path d="M290 760 L288 1000"/>
+      <path d="M410 760 L410 1000"/>
+      <path d="M530 760 L532 1000"/>
+      <path d="M650 760 L652 1000"/>
+      <path d="M770 760 L775 1000"/>
+      <path d="M880 760 L888 1000"/>
+    </g>
+    <!-- deck front trim strip -->
+    <path d="M0 940 L900 940 L900 986 L0 986 Z" fill="#0a0d07"/>
+    <path d="M0 940 L900 940 L900 950 L0 950 Z" fill="#2b3123" opacity="0.8"/>
+    <!-- subtle deck sheen from key light -->
+    <ellipse cx="450" cy="800" rx="260" ry="60" fill="#ffdba8" opacity="0.05"/>
+  </g>
+
+  <!-- ================= MICROPHONE ON STAND (centre stage) ================= -->
+  <g id="mic-stand" transform="translate(450,0)">
+    <!-- cast base -->
+    <ellipse cx="0" cy="942" rx="72" ry="16" fill="#000" opacity="0.85"/>
+    <path d="M-62 928 L62 928 L74 942 L-74 942 Z" fill="#14170f" stroke="#0a0c07" stroke-width="3"/>
+    <!-- tripod legs -->
+    <g stroke="url(#standMetal)" stroke-width="11" stroke-linecap="round">
+      <path d="M-34 926 L-58 946"/>
+      <path d="M34 926 L58 946"/>
+      <path d="M0 926 L0 948"/>
+    </g>
+    <!-- main pole -->
+    <rect x="-7" y="700" width="14" height="228" fill="url(#standMetal)" stroke="#0a0c07" stroke-width="2"/>
+    <!-- clutch collar -->
+    <rect x="-11" y="820" width="22" height="26" rx="4" fill="#1b2015" stroke="#0a0c07" stroke-width="2"/>
+    <!-- boom arm -->
+    <g transform="rotate(-8 -7 700)">
+      <rect x="-5" y="520" width="10" height="182" fill="url(#standMetal)" stroke="#0a0c07" stroke-width="2"/>
+    </g>
+    <!-- mic clip / yoke -->
+    <g transform="translate(-16,512) rotate(-8)">
+      <path d="M-14 0 C-14 -12 14 -12 14 0 L14 34 C14 46 -14 46 -14 34 Z" fill="#12150e" stroke="#0a0c07" stroke-width="3"/>
+    </g>
+
+    <!-- VINTAGE MICROPHONE -->
+    <g id="mic" transform="translate(-22,430) rotate(-8)">
+      <!-- capsule head -->
+      <rect x="-30" y="-58" width="60" height="86" rx="14" fill="url(#micHead)" stroke="#0a0c07" stroke-width="3"/>
+      <!-- mesh grille bands -->
+      <g stroke="#0c0f08" stroke-width="2" opacity="0.85">
+        <path d="M-27 -44 L27 -44"/>
+        <path d="M-28 -30 L28 -30"/>
+        <path d="M-29 -16 L29 -16"/>
+        <path d="M-28 -2 L28 -2"/>
+      </g>
+      <!-- highlight sheen on the capsule -->
+      <path d="M-18 -52 Q-24 0 -16 24" stroke="#a9b78f" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <!-- collar ring -->
+      <rect x="-24" y="24" width="48" height="14" rx="4" fill="#0e1109" stroke="#0a0c07" stroke-width="2"/>
+      <!-- tapered body -->
+      <path d="M-24 36 L24 36 L16 104 L-16 104 Z" fill="url(#micBody)" stroke="#0a0c07" stroke-width="3"/>
+      <!-- body highlight -->
+      <path d="M-14 44 L-8 98" stroke="#6b775c" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+      <!-- base collar -->
+      <rect x="-18" y="100" width="36" height="12" rx="3" fill="#0e1109" stroke="#0a0c07" stroke-width="2"/>
+      <!-- cable drop -->
+      <path d="M0 112 Q-8 150 4 186" stroke="#0a0c07" stroke-width="6" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- key-light pool under the mic -->
+    <ellipse cx="-20" cy="944" rx="120" ry="22" fill="#ffdba8" opacity="0.1"/>
+  </g>
+
+  <!-- ================= MONITOR WEDGES (either side) ================= -->
+  <g transform="translate(196,806)">
+    <path d="M0 60 L96 60 L104 0 L8 0 Z" fill="#15190f" stroke="#0a0c07" stroke-width="3"/>
+    <path d="M12 8 L100 8 L92 54 L20 54 Z" fill="#0d1009" stroke="#242a1c" stroke-width="2"/>
+    <circle cx="56" cy="31" r="13" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+  </g>
+  <g transform="translate(608,806)">
+    <path d="M0 60 L96 60 L104 0 L8 0 Z" fill="#15190f" stroke="#0a0c07" stroke-width="3"/>
+    <path d="M12 8 L100 8 L92 54 L20 54 Z" fill="#0d1009" stroke="#242a1c" stroke-width="2"/>
+    <circle cx="56" cy="31" r="13" fill="#1b2015" stroke="#2e3526" stroke-width="2"/>
+  </g>
+
+  <!-- ================= STAGE HAZE / ATMOSPHERE ================= -->
+  <rect y="380" width="900" height="520" fill="url(#haze)"/>
+  <!-- low ground fog rolling over the deck -->
+  <ellipse cx="450" cy="880" rx="480" ry="90" fill="#e8dcb8" opacity="0.05"/>
+  <ellipse cx="330" cy="930" rx="300" ry="60" fill="#e8dcb8" opacity="0.04"/>
+  <ellipse cx="580" cy="950" rx="260" ry="50" fill="#e8dcb8" opacity="0.035"/>
+
+  <!-- floating dust motes in the beams -->
+  <g fill="#ffeec4" opacity="0.5">
+    <circle cx="330" cy="330" r="2"/>
+    <circle cx="392" cy="470" r="1.6"/>
+    <circle cx="268" cy="560" r="2.2"/>
+    <circle cx="470" cy="380" r="1.8"/>
+    <circle cx="540" cy="540" r="2"/>
+    <circle cx="612" cy="430" r="1.6"/>
+    <circle cx="686" cy="620" r="2.2"/>
+    <circle cx="410" cy="650" r="1.8"/>
+  </g>
+
+  <!-- warm glow bloom around the mic from the key light -->
+  <circle cx="428" cy="420" r="120" fill="#ffdba8" opacity="0.06" filter="url(#bigGlow)"/>
+
+  <!-- ================= SCRIMS (fade into hero text) ================= -->
+  <rect width="900" height="1000" fill="url(#stageLeftScrim)"/>
+  <rect width="900" height="1000" fill="url(#stageTopScrim)"/>
+  <rect width="900" height="1000" fill="url(#stageBottomScrim)"/>
+</svg>

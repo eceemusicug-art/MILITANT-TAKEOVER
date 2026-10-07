@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 620" width="1500" height="620" fill="none">
+  <defs>
+    <radialGradient id="flAmbient" cx="60%" cy="45%" r="62%">
+      <stop offset="0%" stop-color="#141a10" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#070906" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#030403" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flRim" cx="72%" cy="28%" r="48%">
+      <stop offset="0%" stop-color="#c49a38" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#c49a38" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="flFloor" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="flSkin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#24130a"/>
+      <stop offset="20%" stop-color="#442313"/>
+      <stop offset="50%" stop-color="#69371e"/>
+      <stop offset="78%" stop-color="#4d2917"/>
+      <stop offset="100%" stop-color="#221108"/>
+    </linearGradient>
+    <linearGradient id="flHead" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a0e07"/>
+      <stop offset="18%" stop-color="#3d1f11"/>
+      <stop offset="42%" stop-color="#61331c"/>
+      <stop offset="64%" stop-color="#804425"/>
+      <stop offset="85%" stop-color="#4a2614"/>
+      <stop offset="100%" stop-color="#1d0f07"/>
+    </linearGradient>
+    <linearGradient id="flSkinShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#995632" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#995632" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="flTank" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d0d5de"/>
+      <stop offset="25%" stop-color="#edf1f7"/>
+      <stop offset="52%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#e8ecf2"/>
+      <stop offset="100%" stop-color="#b6beca"/>
+    </linearGradient>
+
+    <linearGradient id="flCargo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#293617"/>
+      <stop offset="25%" stop-color="#455b27"/>
+      <stop offset="52%" stop-color="#5a7434"/>
+      <stop offset="80%" stop-color="#445826"/>
+      <stop offset="100%" stop-color="#243014"/>
+    </linearGradient>
+    <linearGradient id="flCargoFold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6c8c3e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#243014" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="flTimb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#996a1a"/>
+      <stop offset="25%" stop-color="#d69b2d"/>
+      <stop offset="52%" stop-color="#f0b643"/>
+      <stop offset="80%" stop-color="#d4982a"/>
+      <stop offset="100%" stop-color="#8a5c13"/>
+    </linearGradient>
+    <linearGradient id="flTimbTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5c762"/>
+      <stop offset="45%" stop-color="#dfa433"/>
+      <stop offset="100%" stop-color="#a37018"/>
+    </linearGradient>
+    <linearGradient id="flSole" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d280c"/>
+      <stop offset="50%" stop-color="#5a3d13"/>
+      <stop offset="100%" stop-color="#281a08"/>
+    </linearGradient>
+
+    <linearGradient id="flChain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#e0e4eb"/>
+      <stop offset="70%" stop-color="#9aa3b2"/>
+      <stop offset="100%" stop-color="#5b6473"/>
+    </linearGradient>
+
+    <filter id="flGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- black studio field -->
+  <rect width="1500" height="620" fill="#030403"/>
+  <rect width="1500" height="620" fill="url(#flAmbient)"/>
+  <rect width="1500" height="620" fill="url(#flRim)"/>
+  <ellipse cx="830" cy="565" rx="240" ry="26" fill="url(#flFloor)"/>
+
+  <!-- ================= ECEE FIGURE (scaled into wide frame) ================= -->
+  <g transform="translate(553,12) scale(0.45)">
+    <!-- reflection -->
+    <g opacity="0.16" transform="matrix(1 0 0 -0.3 0 1680)">
+      <rect x="420" y="1120" width="155" height="110" rx="14" fill="#d69b2d"/>
+      <rect x="625" y="1120" width="155" height="110" rx="14" fill="#d69b2d"/>
+    </g>
+
+    <!-- boots -->
+    <g transform="translate(422,1058)">
+      <rect x="42" y="12" width="100" height="24" rx="6" fill="#141416" stroke="#080809" stroke-width="2.5"/>
+      <path d="M12 36 L152 36 Q162 55 162 82 L162 135 Q162 144 148 144 L18 144 Q8 144 8 135 L8 68 Q8 42 12 36 Z" fill="url(#flTimb)" stroke="#4d350c" stroke-width="3.5"/>
+      <path d="M18 38 L146 38 L146 88 L18 88 Z" fill="url(#flTimbTop)" opacity="0.65"/>
+      <path d="M22 62 Q75 66 142 58" stroke="#fef4d8" stroke-width="1.8" stroke-dasharray="3 2" fill="none" opacity="0.85"/>
+      <path d="M22 132 L146 132" stroke="#fef4d8" stroke-width="1.8" stroke-dasharray="3 2" fill="none" opacity="0.8"/>
+      <rect x="48" y="24" width="38" height="48" rx="4" fill="#a47018"/>
+      <g stroke="#ffffff" stroke-width="3.5" stroke-linecap="round">
+        <line x1="52" y1="46" x2="82" y2="46"/><line x1="50" y1="62" x2="84" y2="62"/>
+        <line x1="50" y1="78" x2="84" y2="78"/><line x1="52" y1="94" x2="82" y2="94"/>
+      </g>
+      <circle cx="50" cy="46" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="84" cy="46" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="48" cy="62" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="86" cy="62" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="48" cy="78" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="86" cy="78" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="50" cy="94" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="84" cy="94" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <rect x="4" y="136" width="162" height="12" rx="3" fill="#f7bf48" stroke="#5a3d0b" stroke-width="2.5"/>
+      <path d="M0 146 L170 146 L168 172 Q158 178 140 178 L20 178 Q4 178 0 172 Z" fill="url(#flSole)" stroke="#1a1105" stroke-width="3"/>
+      <path d="M12 165 L28 165 M40 166 L58 166 M72 166 L90 166 M104 166 L122 166 M136 165 L154 165" stroke="#160e05" stroke-width="8" stroke-linecap="square"/>
+    </g>
+    <g transform="translate(618,1058)">
+      <rect x="36" y="12" width="100" height="24" rx="6" fill="#141416" stroke="#080809" stroke-width="2.5"/>
+      <path d="M8 36 L148 36 Q158 42 162 68 L162 135 Q162 144 152 144 L22 144 Q8 144 8 135 L8 82 Q8 55 18 36 Z" fill="url(#flTimb)" stroke="#4d350c" stroke-width="3.5"/>
+      <path d="M14 38 L142 38 L142 88 L14 88 Z" fill="url(#flTimbTop)" opacity="0.65"/>
+      <path d="M18 58 Q85 66 138 62" stroke="#fef4d8" stroke-width="1.8" stroke-dasharray="3 2" fill="none" opacity="0.85"/>
+      <path d="M14 132 L138 132" stroke="#fef4d8" stroke-width="1.8" stroke-dasharray="3 2" fill="none" opacity="0.8"/>
+      <rect x="74" y="24" width="38" height="48" rx="4" fill="#a47018"/>
+      <g stroke="#ffffff" stroke-width="3.5" stroke-linecap="round">
+        <line x1="78" y1="46" x2="108" y2="46"/><line x1="76" y1="62" x2="110" y2="62"/>
+        <line x1="76" y1="78" x2="110" y2="78"/><line x1="78" y1="94" x2="108" y2="94"/>
+      </g>
+      <circle cx="76" cy="46" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="110" cy="46" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="74" cy="62" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="112" cy="62" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="74" cy="78" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="112" cy="78" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="76" cy="94" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <circle cx="110" cy="94" r="3" fill="#ffeaa3" stroke="#68470a" stroke-width="1"/>
+      <rect x="4" y="136" width="162" height="12" rx="3" fill="#f7bf48" stroke="#5a3d0b" stroke-width="2.5"/>
+      <path d="M0 146 L170 146 L168 172 Q164 178 150 178 L30 178 Q12 178 0 172 Z" fill="url(#flSole)" stroke="#1a1105" stroke-width="3"/>
+      <path d="M16 165 L34 165 M48 166 L66 166 M80 166 L98 166 M112 166 L130 166 M142 165 L160 165" stroke="#160e05" stroke-width="8" stroke-linecap="square"/>
+    </g>
+
+    <!-- cargo pants -->
+    <path d="M472 730 L728 730 L722 790 Q600 802 478 790 Z" fill="url(#flCargo)" stroke="#1a240e" stroke-width="4"/>
+    <path d="M474 730 L726 730 L724 746 L476 746 Z" fill="#2d3a19" stroke="#151d0c" stroke-width="2"/>
+    <rect x="584" y="732" width="32" height="12" rx="2" fill="#889e5a" stroke="#232e14" stroke-width="1.5"/>
+    <line x1="600" y1="746" x2="600" y2="796" stroke="#161f0d" stroke-width="5"/>
+    <path d="M478 790 L592 790 L590 1070 L484 1070 Z" fill="url(#flCargo)" stroke="#1a240e" stroke-width="4"/>
+    <rect x="484" y="796" width="102" height="268" fill="url(#flCargoFold)"/>
+    <rect x="472" y="855" width="48" height="66" rx="4" fill="#3c4d21" stroke="#1c2510" stroke-width="3"/>
+    <path d="M468 855 L524 855 L518 872 L474 872 Z" fill="#2d3a19" stroke="#18200d" stroke-width="2"/>
+    <circle cx="496" cy="864" r="3" fill="#6a823f"/>
+    <path d="M486 945 L588 945" stroke="#1d2611" stroke-width="4" stroke-dasharray="10 6"/>
+    <rect x="478" y="1052" width="116" height="22" rx="5" fill="#32401c" stroke="#151e0b" stroke-width="3"/>
+    <path d="M608 790 L722 790 L716 1070 L610 1070 Z" fill="url(#flCargo)" stroke="#1a240e" stroke-width="4"/>
+    <rect x="614" y="796" width="102" height="268" fill="url(#flCargoFold)"/>
+    <rect x="680" y="855" width="48" height="66" rx="4" fill="#3c4d21" stroke="#1c2510" stroke-width="3"/>
+    <path d="M676 855 L732 855 L726 872 L682 872 Z" fill="#2d3a19" stroke="#18200d" stroke-width="2"/>
+    <circle cx="704" cy="864" r="3" fill="#6a823f"/>
+    <path d="M612 945 L714 945" stroke="#1d2611" stroke-width="4" stroke-dasharray="10 6"/>
+    <rect x="606" y="1052" width="116" height="22" rx="5" fill="#32401c" stroke="#151e0b" stroke-width="3"/>
+
+    <!-- torso + white tank -->
+    <path d="M500 450 L700 450 L726 734 L474 734 Z" fill="url(#flSkin)" stroke="#221108" stroke-width="4"/>
+    <path d="M528 450 L566 450 Q600 500 634 450 L672 450 Q684 490 682 540 Q680 580 722 610 L725 730 L475 730 L478 610 Q520 580 518 540 Q516 490 528 450 Z" fill="url(#flTank)" stroke="#abb2be" stroke-width="3"/>
+    <path d="M532 452 Q600 504 668 452" stroke="#c0c7d4" stroke-width="3" fill="none"/>
+    <g stroke="#e2e6ed" stroke-width="1.8" opacity="0.75">
+      <line x1="560" y1="520" x2="560" y2="720"/>
+      <line x1="580" y1="510" x2="580" y2="720"/>
+      <line x1="600" y1="506" x2="600" y2="720"/>
+      <line x1="620" y1="510" x2="620" y2="720"/>
+      <line x1="640" y1="520" x2="640" y2="720"/>
+    </g>
+    <path d="M505 650 Q600 668 695 650" stroke="#c0c7d4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M515 690 Q600 706 685 690" stroke="#c0c7d4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <rect x="473" y="720" width="254" height="12" fill="#d2d7e0" stroke="#9da5b3" stroke-width="1.5"/>
+    <path d="M552 454 Q600 535 648 454" stroke="url(#flChain)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M556 458 Q600 530 644 458" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.9"/>
+    <circle cx="600" cy="534" r="6" fill="#1b2029" stroke="url(#flChain)" stroke-width="2.2"/>
+    <circle cx="600" cy="534" r="3.2" fill="#ffffff" filter="url(#flGlow)"/>
+
+    <!-- left arm (hand at waist) -->
+    <circle cx="715" cy="485" r="28" fill="#3a1e11"/>
+    <path d="M710 465 L760 525 L755 645 Q750 675 725 680 L675 660 L672 590 L695 500 Z" fill="url(#flSkin)" stroke="#221108" stroke-width="4"/>
+    <path d="M720 495 L745 545 L742 630" stroke="url(#flSkinShine)" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M725 645 L645 660 L635 605 L705 600 Z" fill="url(#flSkin)" stroke="#221108" stroke-width="3.5"/>
+    <g transform="translate(635,630) rotate(-70)">
+      <rect x="-8" y="-18" width="16" height="14" rx="3" fill="#3a1e11" stroke="#1a0c06" stroke-width="2"/>
+      <path d="M -16,-6 C -28,-6 -34,14 -32,32 C -30,50 -12,56 4,52 C 18,48 24,34 22,22 C 20,10 6,18 2,24 C -4,32 -14,30 -16,18 C -18,6 -4,8 0,4 C -6,-4 -10,-6 -16,-6 Z" fill="url(#flSkin)" stroke="#1a0c06" stroke-width="3"/>
+      <path d="M -26,16 C -26,28 -18,44 -2,42" stroke="#8d4b29" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+    </g>
+
+    <!-- right arm raised in celebration -->
+    <circle cx="485" cy="485" r="28" fill="#3a1e11"/>
+    <path d="M490 470 L440 370 L375 295 L355 335 L420 435 L470 515 Z" fill="url(#flSkin)" stroke="#221108" stroke-width="4.5"/>
+    <path d="M470 480 L425 400 L380 340" stroke="url(#flSkinShine)" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M370 310 L455 185 L498 215 L415 350 Z" fill="url(#flSkin)" stroke="#221108" stroke-width="4.5"/>
+    <path d="M395 315 L460 215" stroke="url(#flSkinShine)" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <rect x="470" y="185" width="34" height="18" rx="4" fill="#351a0e" stroke="#180b05" stroke-width="2" transform="rotate(-38 487 194)"/>
+    <g transform="translate(506,178) rotate(-115)">
+      <rect x="-9" y="-20" width="18" height="15" rx="3" fill="#3a1e11" stroke="#1a0c06" stroke-width="2"/>
+      <path d="M -16,-6 C -28,-6 -34,14 -32,32 C -30,50 -12,56 4,52 C 18,48 24,34 22,22 C 20,10 6,18 2,24 C -4,32 -14,30 -16,18 C -18,6 -4,8 0,4 C -6,-4 -10,-6 -16,-6 Z" fill="url(#flSkin)" stroke="#1a0c06" stroke-width="3.5"/>
+      <path d="M -26,16 C -26,28 -18,44 -2,42" stroke="#944f2b" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.65"/>
+    </g>
+
+    <!-- head -->
+    <rect x="568" y="415" width="64" height="42" rx="6" fill="#3a1d0f" stroke="#1d0d06" stroke-width="3"/>
+    <ellipse cx="600" cy="420" rx="32" ry="7" fill="#582c16"/>
+    <rect x="510" y="155" width="180" height="235" rx="64" fill="url(#flHead)" stroke="#1a0d06" stroke-width="5"/>
+    <ellipse cx="600" cy="155" rx="46" ry="14" fill="#4d2715" stroke="#1a0d06" stroke-width="3"/>
+    <ellipse cx="600" cy="152" rx="34" ry="9" fill="#69361e"/>
+    <ellipse cx="558" cy="202" rx="32" ry="16" fill="url(#flSkinShine)" transform="rotate(-15 558 202)"/>
+    <ellipse cx="642" cy="202" rx="28" ry="14" fill="url(#flSkinShine)" transform="rotate(15 642 202)"/>
+    <path d="M 532 240 Q 562 222 586 238" stroke="#060608" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M 614 238 Q 638 222 668 240" stroke="#060608" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M 542 268 Q 560 252 578 268" stroke="#070709" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="560" cy="268" rx="12" ry="15" fill="#070709"/>
+    <circle cx="557" cy="262" r="4.2" fill="#ffffff"/>
+    <path d="M 622 268 Q 640 252 658 268" stroke="#070709" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="640" cy="268" rx="12" ry="15" fill="#070709"/>
+    <circle cx="637" cy="262" r="4.2" fill="#ffffff"/>
+    <path d="M 540 298 Q 600 306 660 298 Q 664 356 600 364 Q 536 356 540 298 Z" fill="#120502" stroke="#080201" stroke-width="4"/>
+    <path d="M 546 300 Q 600 308 654 300 Q 650 330 600 332 Q 550 330 546 300 Z" fill="#ffffff"/>
+    <line x1="573" y1="304" x2="572" y2="328" stroke="#d5d8de" stroke-width="1.8"/>
+    <line x1="600" y1="305" x2="600" y2="332" stroke="#d5d8de" stroke-width="1.8"/>
+    <line x1="627" y1="304" x2="628" y2="328" stroke="#d5d8de" stroke-width="1.8"/>
+    <path d="M 566 346 Q 600 336 634 346 Q 620 360 600 360 Q 580 360 566 346 Z" fill="#cf4a58"/>
+    <path d="M 556 290 Q 600 294 644 290" stroke="#221006" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+    <!-- dreads to neck -->
+    <path d="M 515 175 Q 600 95 685 175 Q 722 235 726 315 Q 600 338 474 315 Q 478 235 515 175 Z" fill="#0c0d11" stroke="#050608" stroke-width="4"/>
+    <g stroke="#090a0d" stroke-linecap="round" fill="none">
+      <path d="M 502 195 Q 472 260 470 330 T 472 418" stroke-width="22"/>
+      <path d="M 522 182 Q 494 262 496 342 T 500 426" stroke-width="24"/>
+      <path d="M 542 172 Q 520 258 522 340 T 526 416" stroke-width="20"/>
+      <path d="M 658 172 Q 680 258 678 340 T 674 416" stroke-width="20"/>
+      <path d="M 678 182 Q 706 262 704 342 T 700 426" stroke-width="24"/>
+      <path d="M 698 195 Q 728 260 726 330 T 724 418" stroke-width="22"/>
+    </g>
+    <g stroke="#323644" stroke-linecap="round" fill="none" opacity="0.55">
+      <path d="M 502 195 Q 472 260 470 330 T 472 418" stroke-width="6"/>
+      <path d="M 522 182 Q 494 262 496 342 T 500 426" stroke-width="7"/>
+      <path d="M 542 172 Q 520 258 522 340 T 526 416" stroke-width="5"/>
+      <path d="M 658 172 Q 680 258 678 340 T 674 416" stroke-width="5"/>
+      <path d="M 678 182 Q 706 262 704 342 T 700 426" stroke-width="7"/>
+      <path d="M 698 195 Q 728 260 726 330 T 724 418" stroke-width="6"/>
+    </g>
+    <path d="M 528 160 Q 600 138 672 160" stroke="#1d2028" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 540 142 Q 600 124 660 142" stroke="#252834" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 552 126 Q 600 114 648 126" stroke="#1b1d24" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
